@@ -1,6 +1,7 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { ChevronDownIcon, MenuIcon } from "lucide-react";
 import { useState } from "react";
+import logoUrl from "@/assets/logo.webp";
 import { Button } from "@/components/ui/button";
 import {
 	DropdownMenu,
@@ -16,17 +17,19 @@ import {
 	SheetTitle,
 	SheetTrigger,
 } from "@/components/ui/sheet";
-import { navGroups, navLinks } from "@/data/navigation";
+import { navGroups } from "@/data/navigation";
 import { site } from "@/data/site";
 import { cn } from "@/lib/utils";
 
 function Logo() {
 	return (
-		<Link to="/" className="flex items-center gap-2">
-			<div className="flex size-10 items-center justify-center rounded-lg bg-linear-to-br from-primary-500 to-accent-500">
-				<span className="text-xl font-bold text-white">{site.shortName}</span>
-			</div>
-			<span className="font-heading text-xl font-bold text-foreground">
+		<Link to="/" className="flex items-center gap-2 shrink">
+			<img
+				src={logoUrl}
+				alt={`${site.name} logo`}
+				className="size-10 shrink-0 rounded-lg object-contain sm:size-12"
+			/>
+			<span className="font-heading text-base font-bold leading-tight text-foreground sm:text-xl shrink min-w-0 overflow-y-hidden">
 				{site.name}
 			</span>
 		</Link>
@@ -45,7 +48,7 @@ export function Header() {
 		<header className="sticky top-0 z-50 bg-background shadow-sm">
 			<nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 				<div className="flex h-16 items-center justify-between">
-					<div className="shrink-0">
+					<div className="shrink">
 						<Logo />
 					</div>
 
@@ -91,7 +94,7 @@ export function Header() {
 						})}
 
 						<Link to="/contact" className={navLinkClass}>
-							Contact
+							Contact Us
 						</Link>
 					</div>
 
@@ -100,9 +103,9 @@ export function Header() {
 						<Button
 							asChild
 							variant="secondary"
-							className="hidden sm:inline-flex"
+							className="hidden md:inline-flex"
 						>
-							<Link to="/register">Register</Link>
+							<Link to="/register">Register Now!</Link>
 						</Button>
 
 						{/* Mobile menu */}
@@ -117,24 +120,43 @@ export function Header() {
 									<MenuIcon className="size-5" />
 								</Button>
 							</SheetTrigger>
-							<SheetContent side="right" className="w-80 overflow-y-auto">
+							<SheetContent
+								side="right"
+								className="w-80 overflow-y-auto"
+								aria-describedby={undefined}
+							>
 								<SheetHeader>
-									<SheetTitle className="text-left">Menu</SheetTitle>
+									<SheetTitle>
+										<SheetClose asChild>
+											<Button asChild variant="secondary">
+												<Link to="/register">Register Now!</Link>
+											</Button>
+										</SheetClose>
+									</SheetTitle>
 								</SheetHeader>
-								<nav className="flex flex-col gap-1 px-4 pb-6">
+								<nav className="flex flex-col gap-1 px-4 pb-6 text-right">
 									<SheetClose asChild>
 										<Link
 											to="/"
 											activeOptions={{ exact: true }}
-											className="rounded-md px-3 py-2 font-medium hover:bg-accent data-[status=active]:bg-accent data-[status=active]:text-primary"
+											className="rounded-md px-3 py-2 font-medium hover:bg-accent data-[status=active]:bg-accent data-[status=active]:font-semibold data-[status=active]:text-primary-700"
 										>
 											Home
 										</Link>
 									</SheetClose>
+									<SheetClose asChild>
+										<Link
+											to="/contact"
+											activeOptions={{ exact: true }}
+											className="rounded-md px-3 py-2 font-medium hover:bg-accent data-[status=active]:bg-accent data-[status=active]:font-semibold data-[status=active]:text-primary-700"
+										>
+											Contact Us
+										</Link>
+									</SheetClose>
 
 									{navGroups.map((group) => (
-										<div key={group.label} className="mt-3">
-											<p className="px-3 py-1 text-sm font-semibold text-muted-foreground">
+										<div key={group.label} className="mt-4 text-right">
+											<p className="px-3 py-1 text-sm font-bold text-black">
 												{group.label}
 											</p>
 											{group.items.map((item) => (
@@ -142,7 +164,7 @@ export function Header() {
 													<Link
 														to={item.to}
 														activeOptions={{ exact: true }}
-														className="block rounded-md px-3 py-2 text-sm hover:bg-accent data-[status=active]:bg-accent data-[status=active]:font-medium data-[status=active]:text-primary"
+														className="block rounded-md px-3 py-2 text-sm hover:bg-accent data-[status=active]:bg-accent data-[status=active]:font-semibold data-[status=active]:text-primary-700"
 													>
 														{item.label}
 													</Link>
@@ -150,27 +172,6 @@ export function Header() {
 											))}
 										</div>
 									))}
-
-									<div className="mt-3">
-										{navLinks
-											.filter((l) => l.to !== "/")
-											.map((link) => (
-												<SheetClose asChild key={link.to}>
-													<Link
-														to={link.to}
-														className="block rounded-md px-3 py-2 font-medium hover:bg-accent data-[status=active]:bg-accent data-[status=active]:text-primary"
-													>
-														{link.label}
-													</Link>
-												</SheetClose>
-											))}
-									</div>
-
-									<SheetClose asChild>
-										<Button asChild className="mt-4">
-											<Link to="/register">Register</Link>
-										</Button>
-									</SheetClose>
 								</nav>
 							</SheetContent>
 						</Sheet>

@@ -1,5 +1,8 @@
 {
-	"permissions": {
-		"allow": ["Bash(pnpm lint *)"]
-	}
+  "permissions": {
+    "allow": [
+      "Bash(pnpm lint *)",
+      "WebFetch(domain:unsplash.com)"
+    ]
+  }
 }

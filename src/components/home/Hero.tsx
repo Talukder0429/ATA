@@ -1,20 +1,16 @@
 import { Link } from "@tanstack/react-router";
-import {
-	CheckIcon,
-	HeartHandshakeIcon,
-	ShieldCheckIcon,
-	SparklesIcon,
-} from "lucide-react";
+import { CheckIcon, HeartHandshakeIcon, ShieldCheckIcon } from "lucide-react";
+import logoUrl from "@/assets/logo.webp";
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/button";
+import { site } from "@/data/site";
 
 /** Unsplash photo by Adrià Crehuet Cano (@acrehuet98), free to use under the
  * Unsplash License. `?` params request a right-sized, optimized crop. */
 const heroImage =
 	"https://images.unsplash.com/photo-1609422644211-a85c36ee36a7?auto=format&fit=crop&w=900&q=80";
 
-/** Quick trust signals — qualitative, so they don't duplicate the numeric
- * <ImpactStats> section that follows the hero on the home page. */
+/** Quick trust signals shown beneath the hero CTAs. */
 const highlights = [
 	"Safe & inclusive for all ages",
 	"Qualified, caring staff",
@@ -35,25 +31,28 @@ export function Hero() {
 				<div className="grid items-center gap-12 lg:grid-cols-2">
 					{/* Content */}
 					<div className="text-center lg:text-left">
-						<div className="mb-4 inline-flex items-center gap-2 rounded-full bg-primary-100 px-4 py-2 text-sm font-semibold text-primary-700">
-							<SparklesIcon className="size-4" />
-							Building Healthier Communities Together
+						<div className="flex justify-center lg:justify-start">
+							<img
+								src={logoUrl}
+								alt={`${site.name} logo`}
+								className="w-full max-w-xs object-contain sm:max-w-sm mx-auto"
+							/>
 						</div>
 
-						<h1 className="mb-6 font-heading text-4xl font-bold leading-[1.1] text-foreground sm:text-5xl lg:text-6xl">
-							<span className="block">Play.</span>
-							<span className="block">Learn.</span>
-							<span className="block bg-linear-to-r from-primary-600 to-accent-600 bg-clip-text pb-2 text-transparent">
+						<h1 className="my-6 flex flex-wrap justify-center gap-x-3 font-heading text-3xl font-bold leading-[1.1] text-foreground sm:text-4xl lg:text-5xl">
+							<span>Play.</span>
+							<span>Learn.</span>
+							<span className="bg-linear-to-r from-primary-600 to-accent-600 bg-clip-text pb-2 text-transparent">
 								Belong.
 							</span>
 						</h1>
 
-						<p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground sm:text-xl lg:mx-0">
+						<p className="mx-auto mb-8 max-w-4xl text-lg text-muted-foreground sm:text-xl lg:mx-0">
 							Engaging programs that bring children, youth, and families
 							together through fitness, learning, and community connection.
 						</p>
 
-						<div className="flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
+						<div className="flex flex-col justify-center gap-4 sm:flex-row">
 							<Button asChild size="lg">
 								<Link to="/programs">Explore Programs</Link>
 							</Button>
@@ -61,21 +60,6 @@ export function Hero() {
 								<Link to="/register">Register Today</Link>
 							</Button>
 						</div>
-
-						{/* Trust highlights */}
-						<ul className="mt-10 grid grid-cols-1 gap-3 border-t border-border pt-8 sm:grid-cols-2">
-							{highlights.map((highlight) => (
-								<li
-									key={highlight}
-									className="flex items-center justify-center gap-2 text-sm font-medium text-muted-foreground lg:justify-start"
-								>
-									<span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-secondary-100">
-										<CheckIcon className="size-3 text-secondary-600" />
-									</span>
-									{highlight}
-								</li>
-							))}
-						</ul>
 					</div>
 
 					{/* Visual */}
@@ -122,6 +106,21 @@ export function Hero() {
 								</div>
 							</div>
 						</div>
+
+						{/* Trust highlights */}
+						<ul className="mt-10 grid grid-cols-1 gap-3 border-t border-border pt-8 sm:grid-cols-2">
+							{highlights.map((highlight) => (
+								<li
+									key={highlight}
+									className="flex items-center justify-center gap-2 text-sm font-medium text-muted-foreground lg:justify-start"
+								>
+									<span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-secondary-100">
+										<CheckIcon className="size-3 text-secondary-600" />
+									</span>
+									{highlight}
+								</li>
+							))}
+						</ul>
 					</div>
 				</div>
 			</Container>

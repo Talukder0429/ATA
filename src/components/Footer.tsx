@@ -1,6 +1,7 @@
 import { SiFacebook, SiInstagram, SiX } from "@icons-pack/react-simple-icons";
 import { Link } from "@tanstack/react-router";
 import { MailIcon, MapPinIcon, PhoneIcon } from "lucide-react";
+import logoUrl from "@/assets/logo.webp";
 import { footerQuickLinks, legalLinks } from "@/data/navigation";
 import { site } from "@/data/site";
 
@@ -18,11 +19,11 @@ export function Footer() {
 					{/* About */}
 					<div className="col-span-1 md:col-span-2">
 						<div className="mb-4 flex items-center gap-2">
-							<div className="flex size-10 items-center justify-center rounded-lg bg-linear-to-br from-primary-500 to-accent-500">
-								<span className="text-xl font-bold text-white">
-									{site.shortName}
-								</span>
-							</div>
+							<img
+								src={logoUrl}
+								alt={`${site.name} logo`}
+								className="size-12 rounded-lg object-contain"
+							/>
 							<span className="font-heading text-xl font-bold text-white">
 								{site.name}
 							</span>

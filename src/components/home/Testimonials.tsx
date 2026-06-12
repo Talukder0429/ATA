@@ -60,7 +60,7 @@ export function Testimonials() {
 								).map((starNum) => (
 									<StarIcon
 										key={`${testimonial.id}-star-${starNum}`}
-										className="size-5 fill-yellow-400 text-yellow-400"
+										className="size-5 fill-accent-400 text-accent-400"
 									/>
 								))}
 							</div>

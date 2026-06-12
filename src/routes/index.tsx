@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CTA } from "@/components/home/CTA";
 import { Hero } from "@/components/home/Hero";
-import { ImpactStats } from "@/components/home/ImpactStats";
 import { ProgramsGrid } from "@/components/home/ProgramsGrid";
 import { Testimonials } from "@/components/home/Testimonials";
+import { UpcomingEvents } from "@/components/home/UpcomingEvents";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
@@ -20,7 +20,7 @@ function RouteComponent() {
 		<>
 			<Hero />
 			<ProgramsGrid />
-			<ImpactStats />
+			<UpcomingEvents />
 			<Testimonials />
 			<CTA />
 		</>
