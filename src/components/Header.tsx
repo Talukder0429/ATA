@@ -1,0 +1,182 @@
+import { Link, useRouterState } from "@tanstack/react-router";
+import { ChevronDownIcon, MenuIcon } from "lucide-react";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import {
+	DropdownMenu,
+	DropdownMenuContent,
+	DropdownMenuItem,
+	DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import {
+	Sheet,
+	SheetClose,
+	SheetContent,
+	SheetHeader,
+	SheetTitle,
+	SheetTrigger,
+} from "@/components/ui/sheet";
+import { navGroups, navLinks } from "@/data/navigation";
+import { site } from "@/data/site";
+import { cn } from "@/lib/utils";
+
+function Logo() {
+	return (
+		<Link to="/" className="flex items-center gap-2">
+			<div className="flex size-10 items-center justify-center rounded-lg bg-linear-to-br from-primary-500 to-accent-500">
+				<span className="text-xl font-bold text-white">{site.shortName}</span>
+			</div>
+			<span className="font-heading text-xl font-bold text-foreground">
+				{site.name}
+			</span>
+		</Link>
+	);
+}
+
+/** Shared classes for top-level nav links; active route gets a primary accent. */
+const navLinkClass =
+	"font-medium text-muted-foreground transition-colors hover:text-primary data-[status=active]:font-semibold data-[status=active]:text-primary";
+
+export function Header() {
+	const [mobileOpen, setMobileOpen] = useState(false);
+	const pathname = useRouterState({ select: (s) => s.location.pathname });
+
+	return (
+		<header className="sticky top-0 z-50 bg-background shadow-sm">
+			<nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+				<div className="flex h-16 items-center justify-between">
+					<div className="shrink-0">
+						<Logo />
+					</div>
+
+					{/* Desktop navigation */}
+					<div className="hidden items-center gap-6 md:flex">
+						<Link
+							to="/"
+							activeOptions={{ exact: true }}
+							className={navLinkClass}
+						>
+							Home
+						</Link>
+
+						{navGroups.map((group) => {
+							const groupActive = pathname.startsWith(group.to as string);
+							return (
+								<DropdownMenu key={group.label} modal={false}>
+									<DropdownMenuTrigger
+										className={cn(
+											"flex items-center gap-1 outline-none",
+											navLinkClass,
+											groupActive && "font-semibold text-primary",
+										)}
+									>
+										{group.label}
+										<ChevronDownIcon className="size-4" />
+									</DropdownMenuTrigger>
+									<DropdownMenuContent align="start">
+										{group.items.map((item) => (
+											<DropdownMenuItem key={item.to} asChild>
+												<Link
+													to={item.to}
+													activeOptions={{ exact: true }}
+													className="data-[status=active]:font-semibold data-[status=active]:text-primary"
+												>
+													{item.label}
+												</Link>
+											</DropdownMenuItem>
+										))}
+									</DropdownMenuContent>
+								</DropdownMenu>
+							);
+						})}
+
+						<Link to="/contact" className={navLinkClass}>
+							Contact
+						</Link>
+					</div>
+
+					{/* Right-side actions */}
+					<div className="flex items-center gap-3">
+						<Button
+							asChild
+							variant="secondary"
+							className="hidden sm:inline-flex"
+						>
+							<Link to="/register">Register</Link>
+						</Button>
+
+						{/* Mobile menu */}
+						<Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
+							<SheetTrigger asChild>
+								<Button
+									variant="ghost"
+									size="icon"
+									className="md:hidden"
+									aria-label="Open menu"
+								>
+									<MenuIcon className="size-5" />
+								</Button>
+							</SheetTrigger>
+							<SheetContent side="right" className="w-80 overflow-y-auto">
+								<SheetHeader>
+									<SheetTitle className="text-left">Menu</SheetTitle>
+								</SheetHeader>
+								<nav className="flex flex-col gap-1 px-4 pb-6">
+									<SheetClose asChild>
+										<Link
+											to="/"
+											activeOptions={{ exact: true }}
+											className="rounded-md px-3 py-2 font-medium hover:bg-accent data-[status=active]:bg-accent data-[status=active]:text-primary"
+										>
+											Home
+										</Link>
+									</SheetClose>
+
+									{navGroups.map((group) => (
+										<div key={group.label} className="mt-3">
+											<p className="px-3 py-1 text-sm font-semibold text-muted-foreground">
+												{group.label}
+											</p>
+											{group.items.map((item) => (
+												<SheetClose asChild key={item.to}>
+													<Link
+														to={item.to}
+														activeOptions={{ exact: true }}
+														className="block rounded-md px-3 py-2 text-sm hover:bg-accent data-[status=active]:bg-accent data-[status=active]:font-medium data-[status=active]:text-primary"
+													>
+														{item.label}
+													</Link>
+												</SheetClose>
+											))}
+										</div>
+									))}
+
+									<div className="mt-3">
+										{navLinks
+											.filter((l) => l.to !== "/")
+											.map((link) => (
+												<SheetClose asChild key={link.to}>
+													<Link
+														to={link.to}
+														className="block rounded-md px-3 py-2 font-medium hover:bg-accent data-[status=active]:bg-accent data-[status=active]:text-primary"
+													>
+														{link.label}
+													</Link>
+												</SheetClose>
+											))}
+									</div>
+
+									<SheetClose asChild>
+										<Button asChild className="mt-4">
+											<Link to="/register">Register</Link>
+										</Button>
+									</SheetClose>
+								</nav>
+							</SheetContent>
+						</Sheet>
+					</div>
+				</div>
+			</nav>
+		</header>
+	);
+}

@@ -9,38 +9,317 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as RegisterRouteImport } from './routes/register'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ResourcesIndexRouteImport } from './routes/resources/index'
+import { Route as ProgramsIndexRouteImport } from './routes/programs/index'
+import { Route as AboutIndexRouteImport } from './routes/about/index'
+import { Route as ResourcesSchoolsRouteImport } from './routes/resources/schools'
+import { Route as ResourcesSafetyRouteImport } from './routes/resources/safety'
+import { Route as ResourcesParentsRouteImport } from './routes/resources/parents'
+import { Route as ResourcesFaqRouteImport } from './routes/resources/faq'
+import { Route as ProgramsYouthRouteImport } from './routes/programs/youth'
+import { Route as ProgramsSummerCampRouteImport } from './routes/programs/summer-camp'
+import { Route as ProgramsSportsRouteImport } from './routes/programs/sports'
+import { Route as ProgramsAfterSchoolRouteImport } from './routes/programs/after-school'
+import { Route as AboutTestimonialsRouteImport } from './routes/about/testimonials'
+import { Route as AboutTeamRouteImport } from './routes/about/team'
+import { Route as AboutPartnersRouteImport } from './routes/about/partners'
+import { Route as AboutMissionRouteImport } from './routes/about/mission'
 
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RegisterRoute = RegisterRouteImport.update({
+  id: '/register',
+  path: '/register',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ResourcesIndexRoute = ResourcesIndexRouteImport.update({
+  id: '/resources/',
+  path: '/resources/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProgramsIndexRoute = ProgramsIndexRouteImport.update({
+  id: '/programs/',
+  path: '/programs/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutIndexRoute = AboutIndexRouteImport.update({
+  id: '/about/',
+  path: '/about/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesSchoolsRoute = ResourcesSchoolsRouteImport.update({
+  id: '/resources/schools',
+  path: '/resources/schools',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesSafetyRoute = ResourcesSafetyRouteImport.update({
+  id: '/resources/safety',
+  path: '/resources/safety',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesParentsRoute = ResourcesParentsRouteImport.update({
+  id: '/resources/parents',
+  path: '/resources/parents',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesFaqRoute = ResourcesFaqRouteImport.update({
+  id: '/resources/faq',
+  path: '/resources/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProgramsYouthRoute = ProgramsYouthRouteImport.update({
+  id: '/programs/youth',
+  path: '/programs/youth',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProgramsSummerCampRoute = ProgramsSummerCampRouteImport.update({
+  id: '/programs/summer-camp',
+  path: '/programs/summer-camp',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProgramsSportsRoute = ProgramsSportsRouteImport.update({
+  id: '/programs/sports',
+  path: '/programs/sports',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProgramsAfterSchoolRoute = ProgramsAfterSchoolRouteImport.update({
+  id: '/programs/after-school',
+  path: '/programs/after-school',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutTestimonialsRoute = AboutTestimonialsRouteImport.update({
+  id: '/about/testimonials',
+  path: '/about/testimonials',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutTeamRoute = AboutTeamRouteImport.update({
+  id: '/about/team',
+  path: '/about/team',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutPartnersRoute = AboutPartnersRouteImport.update({
+  id: '/about/partners',
+  path: '/about/partners',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutMissionRoute = AboutMissionRouteImport.update({
+  id: '/about/mission',
+  path: '/about/mission',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/privacy': typeof PrivacyRoute
+  '/register': typeof RegisterRoute
+  '/terms': typeof TermsRoute
+  '/about/mission': typeof AboutMissionRoute
+  '/about/partners': typeof AboutPartnersRoute
+  '/about/team': typeof AboutTeamRoute
+  '/about/testimonials': typeof AboutTestimonialsRoute
+  '/programs/after-school': typeof ProgramsAfterSchoolRoute
+  '/programs/sports': typeof ProgramsSportsRoute
+  '/programs/summer-camp': typeof ProgramsSummerCampRoute
+  '/programs/youth': typeof ProgramsYouthRoute
+  '/resources/faq': typeof ResourcesFaqRoute
+  '/resources/parents': typeof ResourcesParentsRoute
+  '/resources/safety': typeof ResourcesSafetyRoute
+  '/resources/schools': typeof ResourcesSchoolsRoute
+  '/about/': typeof AboutIndexRoute
+  '/programs/': typeof ProgramsIndexRoute
+  '/resources/': typeof ResourcesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/privacy': typeof PrivacyRoute
+  '/register': typeof RegisterRoute
+  '/terms': typeof TermsRoute
+  '/about/mission': typeof AboutMissionRoute
+  '/about/partners': typeof AboutPartnersRoute
+  '/about/team': typeof AboutTeamRoute
+  '/about/testimonials': typeof AboutTestimonialsRoute
+  '/programs/after-school': typeof ProgramsAfterSchoolRoute
+  '/programs/sports': typeof ProgramsSportsRoute
+  '/programs/summer-camp': typeof ProgramsSummerCampRoute
+  '/programs/youth': typeof ProgramsYouthRoute
+  '/resources/faq': typeof ResourcesFaqRoute
+  '/resources/parents': typeof ResourcesParentsRoute
+  '/resources/safety': typeof ResourcesSafetyRoute
+  '/resources/schools': typeof ResourcesSchoolsRoute
+  '/about': typeof AboutIndexRoute
+  '/programs': typeof ProgramsIndexRoute
+  '/resources': typeof ResourcesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/privacy': typeof PrivacyRoute
+  '/register': typeof RegisterRoute
+  '/terms': typeof TermsRoute
+  '/about/mission': typeof AboutMissionRoute
+  '/about/partners': typeof AboutPartnersRoute
+  '/about/team': typeof AboutTeamRoute
+  '/about/testimonials': typeof AboutTestimonialsRoute
+  '/programs/after-school': typeof ProgramsAfterSchoolRoute
+  '/programs/sports': typeof ProgramsSportsRoute
+  '/programs/summer-camp': typeof ProgramsSummerCampRoute
+  '/programs/youth': typeof ProgramsYouthRoute
+  '/resources/faq': typeof ResourcesFaqRoute
+  '/resources/parents': typeof ResourcesParentsRoute
+  '/resources/safety': typeof ResourcesSafetyRoute
+  '/resources/schools': typeof ResourcesSchoolsRoute
+  '/about/': typeof AboutIndexRoute
+  '/programs/': typeof ProgramsIndexRoute
+  '/resources/': typeof ResourcesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/contact'
+    | '/privacy'
+    | '/register'
+    | '/terms'
+    | '/about/mission'
+    | '/about/partners'
+    | '/about/team'
+    | '/about/testimonials'
+    | '/programs/after-school'
+    | '/programs/sports'
+    | '/programs/summer-camp'
+    | '/programs/youth'
+    | '/resources/faq'
+    | '/resources/parents'
+    | '/resources/safety'
+    | '/resources/schools'
+    | '/about/'
+    | '/programs/'
+    | '/resources/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/contact'
+    | '/privacy'
+    | '/register'
+    | '/terms'
+    | '/about/mission'
+    | '/about/partners'
+    | '/about/team'
+    | '/about/testimonials'
+    | '/programs/after-school'
+    | '/programs/sports'
+    | '/programs/summer-camp'
+    | '/programs/youth'
+    | '/resources/faq'
+    | '/resources/parents'
+    | '/resources/safety'
+    | '/resources/schools'
+    | '/about'
+    | '/programs'
+    | '/resources'
+  id:
+    | '__root__'
+    | '/'
+    | '/contact'
+    | '/privacy'
+    | '/register'
+    | '/terms'
+    | '/about/mission'
+    | '/about/partners'
+    | '/about/team'
+    | '/about/testimonials'
+    | '/programs/after-school'
+    | '/programs/sports'
+    | '/programs/summer-camp'
+    | '/programs/youth'
+    | '/resources/faq'
+    | '/resources/parents'
+    | '/resources/safety'
+    | '/resources/schools'
+    | '/about/'
+    | '/programs/'
+    | '/resources/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ContactRoute: typeof ContactRoute
+  PrivacyRoute: typeof PrivacyRoute
+  RegisterRoute: typeof RegisterRoute
+  TermsRoute: typeof TermsRoute
+  AboutMissionRoute: typeof AboutMissionRoute
+  AboutPartnersRoute: typeof AboutPartnersRoute
+  AboutTeamRoute: typeof AboutTeamRoute
+  AboutTestimonialsRoute: typeof AboutTestimonialsRoute
+  ProgramsAfterSchoolRoute: typeof ProgramsAfterSchoolRoute
+  ProgramsSportsRoute: typeof ProgramsSportsRoute
+  ProgramsSummerCampRoute: typeof ProgramsSummerCampRoute
+  ProgramsYouthRoute: typeof ProgramsYouthRoute
+  ResourcesFaqRoute: typeof ResourcesFaqRoute
+  ResourcesParentsRoute: typeof ResourcesParentsRoute
+  ResourcesSafetyRoute: typeof ResourcesSafetyRoute
+  ResourcesSchoolsRoute: typeof ResourcesSchoolsRoute
+  AboutIndexRoute: typeof AboutIndexRoute
+  ProgramsIndexRoute: typeof ProgramsIndexRoute
+  ResourcesIndexRoute: typeof ResourcesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/register': {
+      id: '/register'
+      path: '/register'
+      fullPath: '/register'
+      preLoaderRoute: typeof RegisterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +327,135 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/resources/': {
+      id: '/resources/'
+      path: '/resources'
+      fullPath: '/resources/'
+      preLoaderRoute: typeof ResourcesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/programs/': {
+      id: '/programs/'
+      path: '/programs'
+      fullPath: '/programs/'
+      preLoaderRoute: typeof ProgramsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about/': {
+      id: '/about/'
+      path: '/about'
+      fullPath: '/about/'
+      preLoaderRoute: typeof AboutIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/schools': {
+      id: '/resources/schools'
+      path: '/resources/schools'
+      fullPath: '/resources/schools'
+      preLoaderRoute: typeof ResourcesSchoolsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/safety': {
+      id: '/resources/safety'
+      path: '/resources/safety'
+      fullPath: '/resources/safety'
+      preLoaderRoute: typeof ResourcesSafetyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/parents': {
+      id: '/resources/parents'
+      path: '/resources/parents'
+      fullPath: '/resources/parents'
+      preLoaderRoute: typeof ResourcesParentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/faq': {
+      id: '/resources/faq'
+      path: '/resources/faq'
+      fullPath: '/resources/faq'
+      preLoaderRoute: typeof ResourcesFaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/programs/youth': {
+      id: '/programs/youth'
+      path: '/programs/youth'
+      fullPath: '/programs/youth'
+      preLoaderRoute: typeof ProgramsYouthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/programs/summer-camp': {
+      id: '/programs/summer-camp'
+      path: '/programs/summer-camp'
+      fullPath: '/programs/summer-camp'
+      preLoaderRoute: typeof ProgramsSummerCampRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/programs/sports': {
+      id: '/programs/sports'
+      path: '/programs/sports'
+      fullPath: '/programs/sports'
+      preLoaderRoute: typeof ProgramsSportsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/programs/after-school': {
+      id: '/programs/after-school'
+      path: '/programs/after-school'
+      fullPath: '/programs/after-school'
+      preLoaderRoute: typeof ProgramsAfterSchoolRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about/testimonials': {
+      id: '/about/testimonials'
+      path: '/about/testimonials'
+      fullPath: '/about/testimonials'
+      preLoaderRoute: typeof AboutTestimonialsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about/team': {
+      id: '/about/team'
+      path: '/about/team'
+      fullPath: '/about/team'
+      preLoaderRoute: typeof AboutTeamRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about/partners': {
+      id: '/about/partners'
+      path: '/about/partners'
+      fullPath: '/about/partners'
+      preLoaderRoute: typeof AboutPartnersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about/mission': {
+      id: '/about/mission'
+      path: '/about/mission'
+      fullPath: '/about/mission'
+      preLoaderRoute: typeof AboutMissionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ContactRoute: ContactRoute,
+  PrivacyRoute: PrivacyRoute,
+  RegisterRoute: RegisterRoute,
+  TermsRoute: TermsRoute,
+  AboutMissionRoute: AboutMissionRoute,
+  AboutPartnersRoute: AboutPartnersRoute,
+  AboutTeamRoute: AboutTeamRoute,
+  AboutTestimonialsRoute: AboutTestimonialsRoute,
+  ProgramsAfterSchoolRoute: ProgramsAfterSchoolRoute,
+  ProgramsSportsRoute: ProgramsSportsRoute,
+  ProgramsSummerCampRoute: ProgramsSummerCampRoute,
+  ProgramsYouthRoute: ProgramsYouthRoute,
+  ResourcesFaqRoute: ResourcesFaqRoute,
+  ResourcesParentsRoute: ResourcesParentsRoute,
+  ResourcesSafetyRoute: ResourcesSafetyRoute,
+  ResourcesSchoolsRoute: ResourcesSchoolsRoute,
+  AboutIndexRoute: AboutIndexRoute,
+  ProgramsIndexRoute: ProgramsIndexRoute,
+  ResourcesIndexRoute: ResourcesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

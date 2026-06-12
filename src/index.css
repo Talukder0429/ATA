@@ -1,2 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap");
 @import "tailwindcss";
-@import "@heroui/styles";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ---------------------------------------------------------------------------
+ * Brand palette (utility scale) — `bg-primary-500`, `text-secondary-600`, etc.
+ * Kept alongside the shadcn semantic tokens below. The semantic `--primary`
+ * (no numeric suffix) drives shadcn components; these scales are for bespoke
+ * brand styling.
+ * ------------------------------------------------------------------------- */
+@theme {
+	--color-primary-50: #fef2f2;
+	--color-primary-100: #fee2e2;
+	--color-primary-200: #fecaca;
+	--color-primary-300: #fca5a5;
+	--color-primary-400: #f87171;
+	--color-primary-500: #ef4444;
+	--color-primary-600: #dc2626;
+	--color-primary-700: #b91c1c;
+	--color-primary-800: #991b1b;
+	--color-primary-900: #7f1d1d;
+
+	--color-secondary-50: #f0fdf4;
+	--color-secondary-100: #dcfce7;
+	--color-secondary-200: #bbf7d0;
+	--color-secondary-300: #86efac;
+	--color-secondary-400: #4ade80;
+	--color-secondary-500: #22c55e;
+	--color-secondary-600: #16a34a;
+	--color-secondary-700: #15803d;
+	--color-secondary-800: #166534;
+	--color-secondary-900: #14532d;
+
+	--color-accent-50: #fff7ed;
+	--color-accent-100: #ffedd5;
+	--color-accent-200: #fed7aa;
+	--color-accent-300: #fdba74;
+	--color-accent-400: #fb923c;
+	--color-accent-500: #f97316;
+	--color-accent-600: #ea580c;
+	--color-accent-700: #c2410c;
+	--color-accent-800: #9a3412;
+	--color-accent-900: #7c2d12;
+
+	--font-sans: "Inter", system-ui, -apple-system, sans-serif;
+	--font-heading: "Poppins", "Inter", system-ui, sans-serif;
+}
+
+/* ---------------------------------------------------------------------------
+ * shadcn/ui semantic tokens. `--primary` is the brand red so shadcn Buttons,
+ * focus rings, etc. stay on-brand. Edit these (or generate with tweakcn) to
+ * retheme the component layer.
+ * ------------------------------------------------------------------------- */
+:root {
+	--radius: 0.625rem;
+
+	--background: #ffffff;
+	--foreground: #171717;
+
+	--card: #ffffff;
+	--card-foreground: #171717;
+	--popover: #ffffff;
+	--popover-foreground: #171717;
+
+	--primary: #dc2626;
+	--primary-foreground: #ffffff;
+
+	--secondary: #f5f5f5;
+	--secondary-foreground: #171717;
+
+	--muted: #f5f5f5;
+	--muted-foreground: #737373;
+
+	--accent: #f5f5f5;
+	--accent-foreground: #171717;
+
+	--destructive: #e7000b;
+
+	--border: #e5e5e5;
+	--input: #e5e5e5;
+	--ring: #dc2626;
+}
+
+.dark {
+	--background: #171717;
+	--foreground: #fafafa;
+
+	--card: #262626;
+	--card-foreground: #fafafa;
+	--popover: #262626;
+	--popover-foreground: #fafafa;
+
+	--primary: #ef4444;
+	--primary-foreground: #ffffff;
+
+	--secondary: #404040;
+	--secondary-foreground: #fafafa;
+
+	--muted: #404040;
+	--muted-foreground: #a1a1a1;
+
+	--accent: #404040;
+	--accent-foreground: #fafafa;
+
+	--destructive: #ff6467;
+
+	--border: #ffffff1a;
+	--input: #ffffff26;
+	--ring: #ef4444;
+}
+
+@theme inline {
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-card: var(--card);
+	--color-card-foreground: var(--card-foreground);
+	--color-popover: var(--popover);
+	--color-popover-foreground: var(--popover-foreground);
+	--color-primary: var(--primary);
+	--color-primary-foreground: var(--primary-foreground);
+	--color-secondary: var(--secondary);
+	--color-secondary-foreground: var(--secondary-foreground);
+	--color-muted: var(--muted);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-accent: var(--accent);
+	--color-accent-foreground: var(--accent-foreground);
+	--color-destructive: var(--destructive);
+	--color-border: var(--border);
+	--color-input: var(--input);
+	--color-ring: var(--ring);
+
+	--radius-sm: calc(var(--radius) - 4px);
+	--radius-md: calc(var(--radius) - 2px);
+	--radius-lg: var(--radius);
+	--radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+	* {
+		@apply border-border outline-ring/50;
+	}
+
+	html {
+		/* Always reserve scrollbar space so navigating between scrolling and
+		   non-scrolling pages doesn't shift the layout horizontally. */
+		scrollbar-gutter: stable;
+	}
+
+	body {
+		@apply bg-background text-foreground font-sans;
+	}
+}
+
+@layer utilities {
+	@keyframes blob {
+		0% {
+			transform: translate(0px, 0px) scale(1);
+		}
+		33% {
+			transform: translate(30px, -50px) scale(1.1);
+		}
+		66% {
+			transform: translate(-20px, 20px) scale(0.9);
+		}
+		100% {
+			transform: translate(0px, 0px) scale(1);
+		}
+	}
+
+	.animate-blob {
+		animation: blob 7s infinite;
+	}
+
+	.animation-delay-2000 {
+		animation-delay: 2s;
+	}
+
+	.animation-delay-4000 {
+		animation-delay: 4s;
+	}
+}
