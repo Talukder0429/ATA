@@ -1,7 +1,7 @@
 import { SiFacebook, SiInstagram, SiX } from "@icons-pack/react-simple-icons";
 import { Link } from "@tanstack/react-router";
 import { MailIcon, MapPinIcon, PhoneIcon } from "lucide-react";
-import logoUrl from "@/assets/logo.webp";
+import logoUrl from "@/assets/logo-image.svg";
 import { footerQuickLinks, legalLinks } from "@/data/navigation";
 import { site } from "@/data/site";
 

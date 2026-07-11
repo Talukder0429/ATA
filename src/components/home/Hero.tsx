@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { CheckIcon, HeartHandshakeIcon, ShieldCheckIcon } from "lucide-react";
-import logoUrl from "@/assets/logo.webp";
+import logoUrl from "@/assets/full-logo.svg";
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/button";
 import { site } from "@/data/site";

@@ -1,7 +1,7 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { ChevronDownIcon, MenuIcon } from "lucide-react";
 import { useState } from "react";
-import logoUrl from "@/assets/logo.webp";
+import logoUrl from "@/assets/logo-image.svg";
 import { Button } from "@/components/ui/button";
 import {
 	DropdownMenu,
