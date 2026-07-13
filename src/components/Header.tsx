@@ -97,6 +97,10 @@ export function Header() {
 							);
 						})}
 
+						<Link to="/about" className={navLinkClass}>
+							About Us
+						</Link>
+
 						<Link to="/contact" className={navLinkClass}>
 							Contact Us
 						</Link>
@@ -151,6 +155,15 @@ export function Header() {
 											className="rounded-md px-3 py-2 font-medium hover:bg-accent data-[status=active]:bg-accent data-[status=active]:font-semibold data-[status=active]:text-primary-700"
 										>
 											Contact Us
+										</Link>
+									</SheetClose>
+									<SheetClose asChild>
+										<Link
+											to="/about"
+											activeOptions={{ exact: true }}
+											className="rounded-md px-3 py-2 font-medium hover:bg-accent data-[status=active]:bg-accent data-[status=active]:font-semibold data-[status=active]:text-primary-700"
+										>
+											About
 										</Link>
 									</SheetClose>
 

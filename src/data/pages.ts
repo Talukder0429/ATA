@@ -20,35 +20,6 @@ export const pages = {
 		description:
 			"Learn more about Active Together Activities — who we are, what drives us, and the community we serve.",
 	},
-	"/about/mission": {
-		title: "Mission & Values",
-		description:
-			"The mission, vision, and core values that guide everything we do.",
-		stub: true,
-		stubNote:
-			"We're crafting a detailed overview of our mission, vision, and core values. Check back soon to learn more about our commitment to the community!",
-	},
-	"/about/team": {
-		title: "Meet Our Team",
-		description: "The people behind Active Together Activities.",
-		stub: true,
-		stubNote:
-			"We're putting together profiles of the dedicated staff and volunteers who make our programs possible.",
-	},
-	"/about/testimonials": {
-		title: "Testimonials",
-		description: "Hear from the families and partners we serve.",
-		stub: true,
-		stubNote:
-			"We're collecting stories from the families, youth, and partners who've been part of our community.",
-	},
-	"/about/partners": {
-		title: "Funders & Partners",
-		description: "The organizations that help make our work possible.",
-		stub: true,
-		stubNote:
-			"We're assembling a directory of the funders and community partners who support our mission.",
-	},
 	"/programs": {
 		title: "Our Programs",
 		description:

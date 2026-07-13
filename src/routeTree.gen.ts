@@ -22,10 +22,6 @@ import { Route as ResourcesSafetyRouteImport } from './routes/resources/safety'
 import { Route as ResourcesParentsRouteImport } from './routes/resources/parents'
 import { Route as ResourcesFaqRouteImport } from './routes/resources/faq'
 import { Route as ProgramsSlugRouteImport } from './routes/programs/$slug'
-import { Route as AboutTestimonialsRouteImport } from './routes/about/testimonials'
-import { Route as AboutTeamRouteImport } from './routes/about/team'
-import { Route as AboutPartnersRouteImport } from './routes/about/partners'
-import { Route as AboutMissionRouteImport } from './routes/about/mission'
 
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
@@ -92,26 +88,6 @@ const ProgramsSlugRoute = ProgramsSlugRouteImport.update({
   path: '/programs/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AboutTestimonialsRoute = AboutTestimonialsRouteImport.update({
-  id: '/about/testimonials',
-  path: '/about/testimonials',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AboutTeamRoute = AboutTeamRouteImport.update({
-  id: '/about/team',
-  path: '/about/team',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AboutPartnersRoute = AboutPartnersRouteImport.update({
-  id: '/about/partners',
-  path: '/about/partners',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AboutMissionRoute = AboutMissionRouteImport.update({
-  id: '/about/mission',
-  path: '/about/mission',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -119,10 +95,6 @@ export interface FileRoutesByFullPath {
   '/privacy': typeof PrivacyRoute
   '/register': typeof RegisterRoute
   '/terms': typeof TermsRoute
-  '/about/mission': typeof AboutMissionRoute
-  '/about/partners': typeof AboutPartnersRoute
-  '/about/team': typeof AboutTeamRoute
-  '/about/testimonials': typeof AboutTestimonialsRoute
   '/programs/$slug': typeof ProgramsSlugRoute
   '/resources/faq': typeof ResourcesFaqRoute
   '/resources/parents': typeof ResourcesParentsRoute
@@ -138,10 +110,6 @@ export interface FileRoutesByTo {
   '/privacy': typeof PrivacyRoute
   '/register': typeof RegisterRoute
   '/terms': typeof TermsRoute
-  '/about/mission': typeof AboutMissionRoute
-  '/about/partners': typeof AboutPartnersRoute
-  '/about/team': typeof AboutTeamRoute
-  '/about/testimonials': typeof AboutTestimonialsRoute
   '/programs/$slug': typeof ProgramsSlugRoute
   '/resources/faq': typeof ResourcesFaqRoute
   '/resources/parents': typeof ResourcesParentsRoute
@@ -158,10 +126,6 @@ export interface FileRoutesById {
   '/privacy': typeof PrivacyRoute
   '/register': typeof RegisterRoute
   '/terms': typeof TermsRoute
-  '/about/mission': typeof AboutMissionRoute
-  '/about/partners': typeof AboutPartnersRoute
-  '/about/team': typeof AboutTeamRoute
-  '/about/testimonials': typeof AboutTestimonialsRoute
   '/programs/$slug': typeof ProgramsSlugRoute
   '/resources/faq': typeof ResourcesFaqRoute
   '/resources/parents': typeof ResourcesParentsRoute
@@ -179,10 +143,6 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/register'
     | '/terms'
-    | '/about/mission'
-    | '/about/partners'
-    | '/about/team'
-    | '/about/testimonials'
     | '/programs/$slug'
     | '/resources/faq'
     | '/resources/parents'
@@ -198,10 +158,6 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/register'
     | '/terms'
-    | '/about/mission'
-    | '/about/partners'
-    | '/about/team'
-    | '/about/testimonials'
     | '/programs/$slug'
     | '/resources/faq'
     | '/resources/parents'
@@ -217,10 +173,6 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/register'
     | '/terms'
-    | '/about/mission'
-    | '/about/partners'
-    | '/about/team'
-    | '/about/testimonials'
     | '/programs/$slug'
     | '/resources/faq'
     | '/resources/parents'
@@ -237,10 +189,6 @@ export interface RootRouteChildren {
   PrivacyRoute: typeof PrivacyRoute
   RegisterRoute: typeof RegisterRoute
   TermsRoute: typeof TermsRoute
-  AboutMissionRoute: typeof AboutMissionRoute
-  AboutPartnersRoute: typeof AboutPartnersRoute
-  AboutTeamRoute: typeof AboutTeamRoute
-  AboutTestimonialsRoute: typeof AboutTestimonialsRoute
   ProgramsSlugRoute: typeof ProgramsSlugRoute
   ResourcesFaqRoute: typeof ResourcesFaqRoute
   ResourcesParentsRoute: typeof ResourcesParentsRoute
@@ -344,34 +292,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProgramsSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/about/testimonials': {
-      id: '/about/testimonials'
-      path: '/about/testimonials'
-      fullPath: '/about/testimonials'
-      preLoaderRoute: typeof AboutTestimonialsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/about/team': {
-      id: '/about/team'
-      path: '/about/team'
-      fullPath: '/about/team'
-      preLoaderRoute: typeof AboutTeamRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/about/partners': {
-      id: '/about/partners'
-      path: '/about/partners'
-      fullPath: '/about/partners'
-      preLoaderRoute: typeof AboutPartnersRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/about/mission': {
-      id: '/about/mission'
-      path: '/about/mission'
-      fullPath: '/about/mission'
-      preLoaderRoute: typeof AboutMissionRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
@@ -381,10 +301,6 @@ const rootRouteChildren: RootRouteChildren = {
   PrivacyRoute: PrivacyRoute,
   RegisterRoute: RegisterRoute,
   TermsRoute: TermsRoute,
-  AboutMissionRoute: AboutMissionRoute,
-  AboutPartnersRoute: AboutPartnersRoute,
-  AboutTeamRoute: AboutTeamRoute,
-  AboutTestimonialsRoute: AboutTestimonialsRoute,
   ProgramsSlugRoute: ProgramsSlugRoute,
   ResourcesFaqRoute: ResourcesFaqRoute,
   ResourcesParentsRoute: ResourcesParentsRoute,

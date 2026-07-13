@@ -32,17 +32,6 @@ export const navGroups: NavGroup[] = [
 		],
 	},
 	{
-		label: "About",
-		to: "/about",
-		items: [
-			{ label: "About Us", to: "/about" },
-			{ label: "Mission & Values", to: "/about/mission" },
-			{ label: "Meet Our Team", to: "/about/team" },
-			{ label: "Testimonials", to: "/about/testimonials" },
-			{ label: "Funders & Partners", to: "/about/partners" },
-		],
-	},
-	{
 		label: "Resources",
 		to: "/resources",
 		items: [
