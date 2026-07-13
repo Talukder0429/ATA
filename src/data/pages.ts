@@ -54,38 +54,6 @@ export const pages = {
 		description:
 			"Explore our wide range of programs designed to keep your family active, engaged, and thriving.",
 	},
-	"/programs/youth": {
-		title: "Youth Development Programs",
-		description:
-			"Leadership development, social activities, and skill-building for older youth.",
-		stub: true,
-		stubNote:
-			"We're compiling information about our youth development programs. Check back soon to discover programs for older youth!",
-	},
-	"/programs/after-school": {
-		title: "After School Programs",
-		description:
-			"Safe, supervised activities with homework support and recreation.",
-		stub: true,
-		stubNote:
-			"We're finalizing details for our after-school programs, including schedules and enrollment.",
-	},
-	"/programs/summer-camp": {
-		title: "Summer Camp",
-		description:
-			"Week-long adventures with outdoor activities, crafts, and field trips.",
-		stub: true,
-		stubNote:
-			"We're planning an exciting summer camp lineup. Check back soon for dates, themes, and registration.",
-	},
-	"/programs/sports": {
-		title: "Sports Programs",
-		description:
-			"Fun movement activities including circuit training, sports, and coordination games.",
-		stub: true,
-		stubNote:
-			"We're organizing our sports program offerings and season schedules.",
-	},
 	"/resources": {
 		title: "Resources",
 		description:

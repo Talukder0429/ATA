@@ -2,7 +2,15 @@
   "permissions": {
     "allow": [
       "Bash(pnpm lint *)",
-      "WebFetch(domain:unsplash.com)"
+      "WebFetch(domain:unsplash.com)",
+      "Bash(pnpm add *)",
+      "Bash(pnpm test *)",
+      "Bash(git add *)",
+      "Bash(pnpm tsc *)",
+      "Bash(node *)",
+      "Bash(pnpm build *)",
+      "Bash(pnpm vite *)",
+      "Bash(pnpm biome *)"
     ]
   }
 }

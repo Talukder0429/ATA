@@ -21,10 +21,7 @@ import { Route as ResourcesSchoolsRouteImport } from './routes/resources/schools
 import { Route as ResourcesSafetyRouteImport } from './routes/resources/safety'
 import { Route as ResourcesParentsRouteImport } from './routes/resources/parents'
 import { Route as ResourcesFaqRouteImport } from './routes/resources/faq'
-import { Route as ProgramsYouthRouteImport } from './routes/programs/youth'
-import { Route as ProgramsSummerCampRouteImport } from './routes/programs/summer-camp'
-import { Route as ProgramsSportsRouteImport } from './routes/programs/sports'
-import { Route as ProgramsAfterSchoolRouteImport } from './routes/programs/after-school'
+import { Route as ProgramsSlugRouteImport } from './routes/programs/$slug'
 import { Route as AboutTestimonialsRouteImport } from './routes/about/testimonials'
 import { Route as AboutTeamRouteImport } from './routes/about/team'
 import { Route as AboutPartnersRouteImport } from './routes/about/partners'
@@ -90,24 +87,9 @@ const ResourcesFaqRoute = ResourcesFaqRouteImport.update({
   path: '/resources/faq',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProgramsYouthRoute = ProgramsYouthRouteImport.update({
-  id: '/programs/youth',
-  path: '/programs/youth',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProgramsSummerCampRoute = ProgramsSummerCampRouteImport.update({
-  id: '/programs/summer-camp',
-  path: '/programs/summer-camp',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProgramsSportsRoute = ProgramsSportsRouteImport.update({
-  id: '/programs/sports',
-  path: '/programs/sports',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProgramsAfterSchoolRoute = ProgramsAfterSchoolRouteImport.update({
-  id: '/programs/after-school',
-  path: '/programs/after-school',
+const ProgramsSlugRoute = ProgramsSlugRouteImport.update({
+  id: '/programs/$slug',
+  path: '/programs/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutTestimonialsRoute = AboutTestimonialsRouteImport.update({
@@ -141,10 +123,7 @@ export interface FileRoutesByFullPath {
   '/about/partners': typeof AboutPartnersRoute
   '/about/team': typeof AboutTeamRoute
   '/about/testimonials': typeof AboutTestimonialsRoute
-  '/programs/after-school': typeof ProgramsAfterSchoolRoute
-  '/programs/sports': typeof ProgramsSportsRoute
-  '/programs/summer-camp': typeof ProgramsSummerCampRoute
-  '/programs/youth': typeof ProgramsYouthRoute
+  '/programs/$slug': typeof ProgramsSlugRoute
   '/resources/faq': typeof ResourcesFaqRoute
   '/resources/parents': typeof ResourcesParentsRoute
   '/resources/safety': typeof ResourcesSafetyRoute
@@ -163,10 +142,7 @@ export interface FileRoutesByTo {
   '/about/partners': typeof AboutPartnersRoute
   '/about/team': typeof AboutTeamRoute
   '/about/testimonials': typeof AboutTestimonialsRoute
-  '/programs/after-school': typeof ProgramsAfterSchoolRoute
-  '/programs/sports': typeof ProgramsSportsRoute
-  '/programs/summer-camp': typeof ProgramsSummerCampRoute
-  '/programs/youth': typeof ProgramsYouthRoute
+  '/programs/$slug': typeof ProgramsSlugRoute
   '/resources/faq': typeof ResourcesFaqRoute
   '/resources/parents': typeof ResourcesParentsRoute
   '/resources/safety': typeof ResourcesSafetyRoute
@@ -186,10 +162,7 @@ export interface FileRoutesById {
   '/about/partners': typeof AboutPartnersRoute
   '/about/team': typeof AboutTeamRoute
   '/about/testimonials': typeof AboutTestimonialsRoute
-  '/programs/after-school': typeof ProgramsAfterSchoolRoute
-  '/programs/sports': typeof ProgramsSportsRoute
-  '/programs/summer-camp': typeof ProgramsSummerCampRoute
-  '/programs/youth': typeof ProgramsYouthRoute
+  '/programs/$slug': typeof ProgramsSlugRoute
   '/resources/faq': typeof ResourcesFaqRoute
   '/resources/parents': typeof ResourcesParentsRoute
   '/resources/safety': typeof ResourcesSafetyRoute
@@ -210,10 +183,7 @@ export interface FileRouteTypes {
     | '/about/partners'
     | '/about/team'
     | '/about/testimonials'
-    | '/programs/after-school'
-    | '/programs/sports'
-    | '/programs/summer-camp'
-    | '/programs/youth'
+    | '/programs/$slug'
     | '/resources/faq'
     | '/resources/parents'
     | '/resources/safety'
@@ -232,10 +202,7 @@ export interface FileRouteTypes {
     | '/about/partners'
     | '/about/team'
     | '/about/testimonials'
-    | '/programs/after-school'
-    | '/programs/sports'
-    | '/programs/summer-camp'
-    | '/programs/youth'
+    | '/programs/$slug'
     | '/resources/faq'
     | '/resources/parents'
     | '/resources/safety'
@@ -254,10 +221,7 @@ export interface FileRouteTypes {
     | '/about/partners'
     | '/about/team'
     | '/about/testimonials'
-    | '/programs/after-school'
-    | '/programs/sports'
-    | '/programs/summer-camp'
-    | '/programs/youth'
+    | '/programs/$slug'
     | '/resources/faq'
     | '/resources/parents'
     | '/resources/safety'
@@ -277,10 +241,7 @@ export interface RootRouteChildren {
   AboutPartnersRoute: typeof AboutPartnersRoute
   AboutTeamRoute: typeof AboutTeamRoute
   AboutTestimonialsRoute: typeof AboutTestimonialsRoute
-  ProgramsAfterSchoolRoute: typeof ProgramsAfterSchoolRoute
-  ProgramsSportsRoute: typeof ProgramsSportsRoute
-  ProgramsSummerCampRoute: typeof ProgramsSummerCampRoute
-  ProgramsYouthRoute: typeof ProgramsYouthRoute
+  ProgramsSlugRoute: typeof ProgramsSlugRoute
   ResourcesFaqRoute: typeof ResourcesFaqRoute
   ResourcesParentsRoute: typeof ResourcesParentsRoute
   ResourcesSafetyRoute: typeof ResourcesSafetyRoute
@@ -376,32 +337,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ResourcesFaqRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/programs/youth': {
-      id: '/programs/youth'
-      path: '/programs/youth'
-      fullPath: '/programs/youth'
-      preLoaderRoute: typeof ProgramsYouthRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/programs/summer-camp': {
-      id: '/programs/summer-camp'
-      path: '/programs/summer-camp'
-      fullPath: '/programs/summer-camp'
-      preLoaderRoute: typeof ProgramsSummerCampRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/programs/sports': {
-      id: '/programs/sports'
-      path: '/programs/sports'
-      fullPath: '/programs/sports'
-      preLoaderRoute: typeof ProgramsSportsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/programs/after-school': {
-      id: '/programs/after-school'
-      path: '/programs/after-school'
-      fullPath: '/programs/after-school'
-      preLoaderRoute: typeof ProgramsAfterSchoolRouteImport
+    '/programs/$slug': {
+      id: '/programs/$slug'
+      path: '/programs/$slug'
+      fullPath: '/programs/$slug'
+      preLoaderRoute: typeof ProgramsSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about/testimonials': {
@@ -445,10 +385,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutPartnersRoute: AboutPartnersRoute,
   AboutTeamRoute: AboutTeamRoute,
   AboutTestimonialsRoute: AboutTestimonialsRoute,
-  ProgramsAfterSchoolRoute: ProgramsAfterSchoolRoute,
-  ProgramsSportsRoute: ProgramsSportsRoute,
-  ProgramsSummerCampRoute: ProgramsSummerCampRoute,
-  ProgramsYouthRoute: ProgramsYouthRoute,
+  ProgramsSlugRoute: ProgramsSlugRoute,
   ResourcesFaqRoute: ResourcesFaqRoute,
   ResourcesParentsRoute: ResourcesParentsRoute,
   ResourcesSafetyRoute: ResourcesSafetyRoute,

@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Page } from "@/components/layout/Page";
-import { SectionOverview } from "@/components/SectionOverview";
+import { ProgramGrid } from "@/components/programs/ProgramGrid";
 import { pages } from "@/data/pages";
+import { visiblePrograms } from "@/data/programs";
 import { seo } from "@/lib/seo";
 
 const page = pages["/programs"];
@@ -14,7 +15,7 @@ export const Route = createFileRoute("/programs/")({
 function RouteComponent() {
 	return (
 		<Page title={page.title} description={page.description}>
-			<SectionOverview section="/programs" />
+			<ProgramGrid programs={visiblePrograms} />
 		</Page>
 	);
 }

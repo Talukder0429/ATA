@@ -1,8 +1,10 @@
 import type { LinkProps } from "@tanstack/react-router";
+import { visiblePrograms } from "@/data/programs";
 
 export interface NavLink {
 	label: string;
 	to: LinkProps["to"];
+	params?: { slug: string };
 }
 
 export interface NavGroup {
@@ -22,10 +24,11 @@ export const navGroups: NavGroup[] = [
 		to: "/programs",
 		items: [
 			{ label: "All Programs", to: "/programs" },
-			{ label: "Youth Programs", to: "/programs/youth" },
-			{ label: "After School Programs", to: "/programs/after-school" },
-			{ label: "Summer Camp", to: "/programs/summer-camp" },
-			{ label: "Sports Programs", to: "/programs/sports" },
+			...visiblePrograms.map((p) => ({
+				label: p.name,
+				to: "/programs/$slug" as const,
+				params: { slug: p.slug },
+			})),
 		],
 	},
 	{

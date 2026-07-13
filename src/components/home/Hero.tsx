@@ -8,7 +8,7 @@ import { site } from "@/data/site";
 /** Unsplash photo by Adrià Crehuet Cano (@acrehuet98), free to use under the
  * Unsplash License. `?` params request a right-sized, optimized crop. */
 const heroImage =
-	"https://images.unsplash.com/photo-1609422644211-a85c36ee36a7?auto=format&fit=crop&w=900&q=80";
+	"https://images.unsplash.com/photo-1606470542032-a9caa0be6e97";
 
 /** Quick trust signals shown beneath the hero CTAs. */
 const highlights = [
@@ -69,7 +69,7 @@ export function Hero() {
 								src={heroImage}
 								alt="Children playing soccer together outdoors"
 								loading="eager"
-								className="aspect-4/3 size-full object-cover scale-x-[-1]"
+								className="aspect-4/3 size-full object-cover"
 							/>
 
 							{/* Floating card — top left */}

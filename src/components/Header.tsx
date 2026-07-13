@@ -78,9 +78,13 @@ export function Header() {
 									</DropdownMenuTrigger>
 									<DropdownMenuContent align="start">
 										{group.items.map((item) => (
-											<DropdownMenuItem key={item.to} asChild>
+											<DropdownMenuItem
+												key={item.params?.slug ?? (item.to as string)}
+												asChild
+											>
 												<Link
 													to={item.to}
+													params={item.params as never}
 													activeOptions={{ exact: true }}
 													className="data-[status=active]:font-semibold data-[status=active]:text-primary"
 												>
@@ -100,12 +104,8 @@ export function Header() {
 
 					{/* Right-side actions */}
 					<div className="flex items-center gap-3">
-						<Button
-							asChild
-							variant="secondary"
-							className="hidden md:inline-flex"
-						>
-							<Link to="/register">Register Now!</Link>
+						<Button asChild className="hidden md:inline-flex">
+							<Link to="/register">Register Now</Link>
 						</Button>
 
 						{/* Mobile menu */}
@@ -128,8 +128,8 @@ export function Header() {
 								<SheetHeader>
 									<SheetTitle>
 										<SheetClose asChild>
-											<Button asChild variant="secondary">
-												<Link to="/register">Register Now!</Link>
+											<Button asChild>
+												<Link to="/register">Register Now</Link>
 											</Button>
 										</SheetClose>
 									</SheetTitle>
@@ -160,9 +160,13 @@ export function Header() {
 												{group.label}
 											</p>
 											{group.items.map((item) => (
-												<SheetClose asChild key={item.to}>
+												<SheetClose
+													asChild
+													key={item.params?.slug ?? (item.to as string)}
+												>
 													<Link
 														to={item.to}
+														params={item.params as never}
 														activeOptions={{ exact: true }}
 														className="block rounded-md px-3 py-2 text-sm hover:bg-accent data-[status=active]:bg-accent data-[status=active]:font-semibold data-[status=active]:text-primary-700"
 													>

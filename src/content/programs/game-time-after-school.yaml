@@ -1,0 +1,96 @@
+status: published
+order: 1
+name: Game Time After School
+tagline: Where School Ends, the Fun Begins.
+cardSummary: After-school sports for Grades 3–12, September to June.
+cardImage: https://images.unsplash.com/photo-1598880513655-d1c6d4b2dfbf
+heroImage: https://images.unsplash.com/photo-1761039808159-f02b58f07032
+registrationUrl: "mailto:info@activetogether.org?subject=Game%20Time%20After%20School%20Registration"
+quickFacts:
+  - { label: Schedule, value: "Mon–Fri, 3:00 PM – 7:00 PM (September – June)" }
+  - { label: Ages, value: "Grades 3–12 · All skill levels welcome" }
+  - { label: Transportation, value: "School pickup available · Parent pickup at 7 PM" }
+  - { label: Pricing, value: "$400 with pickup · $200 without pickup" }
+sections:
+  - type: prose
+    heading: Program Overview
+    body: >
+      Game Time After School is an after-school sports program for students in
+      Grades 3–12, running from September to June. It gives youth a fun, active
+      place to spend their afternoons, where they can play sports, learn new
+      skills, make friends, and stay engaged in a safe and supervised
+      environment. Whether they're trying a sport for the first time or looking
+      to improve their game, there's something for everyone.
+  # - type: cards
+  #   heading: Why Parents Choose Game Time After School
+  #   items:
+  #     - { icon: shield-check, title: Safe & supervised after-school environment }
+  #     - { icon: bus, title: Optional school pickup transportation }
+  #     - { icon: users, title: Qualified coaches and caring staff }
+  #     - { icon: activity, title: Daily physical activity }
+  #     - { icon: book-open, title: Homework support }
+  #     - { icon: layers, title: Age-appropriate groups }
+  #     - { icon: award, title: Build confidence and teamwork }
+  #     - { icon: sun, title: Fun, active, and screen-free afternoons }
+  - type: cards
+    heading: Age Divisions
+    items:
+      - { title: Junior Division, text: "Grades 3–5" }
+      - { title: Intermediate Division, text: "Grades 6–8" }
+      - { title: Senior Division, text: "Grades 9–12" }
+  - type: pricing
+    heading: Transportation & Pricing
+    note: Which schools offer pickup is still to be decided.
+    items:
+      - { label: Program + school pickup, price: "$400/month", note: Daily transportation included }
+      - { label: Program only, price: "$200/month", note: Parent drop-off and pickup }
+  - type: checklist
+    heading: What's Included
+    items:
+      - Professional sports instruction
+      - Sports equipment
+      - Daily supervised activities
+      - Homework support
+      - Leadership and teamwork activities
+      - Friendly competitions
+      - Monthly themed events
+      - Achievement recognition
+  - type: prose
+    heading: Sports and Activities
+    body: >
+      Every week, participants experience a mix of team sports, skill
+      development, fitness activities, and recreational games designed to keep
+      them active and engaged. Sports include soccer, basketball, volleyball,
+      badminton, cricket, dodgeball, flag football, fitness challenges, and
+      team-building activities. Throughout the year, participants also enjoy
+      tournaments, themed events, and special activity days.
+  - type: table
+    heading: Weekly Program Schedule
+    note: This is just a sample schedule.
+    columns: [ Day, Theme, Featured Activities ]
+    rows:
+      - [ Monday, Team Sports, "Soccer, Basketball, Team-Building Games" ]
+      - [ Tuesday, Skills Development, "Sport-specific drills, agility training, fitness challenges" ]
+      - [ Wednesday, Competition Day, "Friendly matches, mini tournaments, relay races" ]
+      - [ Thursday, Multi-Sport Adventure, "Volleyball, Badminton, Cricket, Dodgeball, Flag Football" ]
+      - [ Friday, Fun Friday, "Championship games, obstacle courses, theme days, awards, recreation" ]
+  - type: checklist
+    heading: What to Bring
+    items:
+      - Athletic clothing
+      - Comfortable running shoes
+      - Water bottle
+      - Nut-free snack (if desired)
+      - Homework or reading materials (optional)
+      - Weather-appropriate outerwear for outdoor activities
+  - type: prose
+    heading: Safety
+    body: >
+      The safety and well-being of every participant is our highest priority.
+      Our staff provide daily supervision, attendance tracking, secure sign-in
+      and sign-out procedures, and maintain a safe, inclusive environment where
+      every child feels welcome and supported.
+closing:
+  heading: Ready to join?
+  text: Give your child a fun, active, and supportive place to spend their afternoons after school.
+  buttonLabel: Register Today
