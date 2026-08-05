@@ -30,47 +30,26 @@ export const pages = {
 		description:
 			"Helpful information and resources for parents, schools, and the community.",
 	},
-	"/resources/parents": {
-		title: "Parent Resources",
-		description: "Guides and tools to support families in our programs.",
-		stub: true,
-		stubNote:
-			"We're putting together a collection of resources to help parents get the most out of our programs.",
-	},
-	"/resources/schools": {
-		title: "School Resources",
-		description: "Partnership information and resources for schools.",
-		stub: true,
-		stubNote:
-			"We're developing resources for our school partners. Check back soon for collaboration details.",
-	},
-	"/resources/safety": {
-		title: "Safety Information",
-		description: "Our safety policies, certifications, and procedures.",
-		stub: true,
-		stubNote:
-			"We're documenting our safety policies and certifications so you know your family is in good hands.",
-	},
 	"/resources/faq": {
 		title: "Frequently Asked Questions",
 		description: "Answers to common questions about our programs.",
-		stub: true,
-		stubNote:
-			"We're gathering the questions we hear most often and writing up clear answers.",
+	},
+	"/resources/volunteer": {
+		title: "Volunteer With Us",
+		description: "Make a difference in your community by volunteering with us.",
+	},
+	"/resources/code-of-conduct": {
+		title: "Code of Conduct",
+		description:
+			"The expectations we hold for participants, families, staff, and volunteers.",
 	},
 	"/contact": {
 		title: "Contact Us",
 		description: "Get in touch with the Active Together Activities team.",
-		stub: true,
-		stubNote:
-			"We're building an interactive contact form. In the meantime, you can reach us using the details below.",
 	},
 	"/register": {
 		title: "Program Registration",
 		description: "Sign up for Active Together Activities programs.",
-		stub: true,
-		stubNote:
-			"We're developing our online registration system. For immediate registration needs, please contact us.",
 	},
 	"/privacy": {
 		title: "Privacy Policy",

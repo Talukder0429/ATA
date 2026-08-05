@@ -17,10 +17,9 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as ResourcesIndexRouteImport } from './routes/resources/index'
 import { Route as ProgramsIndexRouteImport } from './routes/programs/index'
 import { Route as AboutIndexRouteImport } from './routes/about/index'
-import { Route as ResourcesSchoolsRouteImport } from './routes/resources/schools'
-import { Route as ResourcesSafetyRouteImport } from './routes/resources/safety'
-import { Route as ResourcesParentsRouteImport } from './routes/resources/parents'
+import { Route as ResourcesVolunteerRouteImport } from './routes/resources/volunteer'
 import { Route as ResourcesFaqRouteImport } from './routes/resources/faq'
+import { Route as ResourcesCodeOfConductRouteImport } from './routes/resources/code-of-conduct'
 import { Route as ProgramsSlugRouteImport } from './routes/programs/$slug'
 
 const TermsRoute = TermsRouteImport.update({
@@ -63,24 +62,19 @@ const AboutIndexRoute = AboutIndexRouteImport.update({
   path: '/about/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ResourcesSchoolsRoute = ResourcesSchoolsRouteImport.update({
-  id: '/resources/schools',
-  path: '/resources/schools',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ResourcesSafetyRoute = ResourcesSafetyRouteImport.update({
-  id: '/resources/safety',
-  path: '/resources/safety',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ResourcesParentsRoute = ResourcesParentsRouteImport.update({
-  id: '/resources/parents',
-  path: '/resources/parents',
+const ResourcesVolunteerRoute = ResourcesVolunteerRouteImport.update({
+  id: '/resources/volunteer',
+  path: '/resources/volunteer',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ResourcesFaqRoute = ResourcesFaqRouteImport.update({
   id: '/resources/faq',
   path: '/resources/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesCodeOfConductRoute = ResourcesCodeOfConductRouteImport.update({
+  id: '/resources/code-of-conduct',
+  path: '/resources/code-of-conduct',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProgramsSlugRoute = ProgramsSlugRouteImport.update({
@@ -96,10 +90,9 @@ export interface FileRoutesByFullPath {
   '/register': typeof RegisterRoute
   '/terms': typeof TermsRoute
   '/programs/$slug': typeof ProgramsSlugRoute
+  '/resources/code-of-conduct': typeof ResourcesCodeOfConductRoute
   '/resources/faq': typeof ResourcesFaqRoute
-  '/resources/parents': typeof ResourcesParentsRoute
-  '/resources/safety': typeof ResourcesSafetyRoute
-  '/resources/schools': typeof ResourcesSchoolsRoute
+  '/resources/volunteer': typeof ResourcesVolunteerRoute
   '/about/': typeof AboutIndexRoute
   '/programs/': typeof ProgramsIndexRoute
   '/resources/': typeof ResourcesIndexRoute
@@ -111,10 +104,9 @@ export interface FileRoutesByTo {
   '/register': typeof RegisterRoute
   '/terms': typeof TermsRoute
   '/programs/$slug': typeof ProgramsSlugRoute
+  '/resources/code-of-conduct': typeof ResourcesCodeOfConductRoute
   '/resources/faq': typeof ResourcesFaqRoute
-  '/resources/parents': typeof ResourcesParentsRoute
-  '/resources/safety': typeof ResourcesSafetyRoute
-  '/resources/schools': typeof ResourcesSchoolsRoute
+  '/resources/volunteer': typeof ResourcesVolunteerRoute
   '/about': typeof AboutIndexRoute
   '/programs': typeof ProgramsIndexRoute
   '/resources': typeof ResourcesIndexRoute
@@ -127,10 +119,9 @@ export interface FileRoutesById {
   '/register': typeof RegisterRoute
   '/terms': typeof TermsRoute
   '/programs/$slug': typeof ProgramsSlugRoute
+  '/resources/code-of-conduct': typeof ResourcesCodeOfConductRoute
   '/resources/faq': typeof ResourcesFaqRoute
-  '/resources/parents': typeof ResourcesParentsRoute
-  '/resources/safety': typeof ResourcesSafetyRoute
-  '/resources/schools': typeof ResourcesSchoolsRoute
+  '/resources/volunteer': typeof ResourcesVolunteerRoute
   '/about/': typeof AboutIndexRoute
   '/programs/': typeof ProgramsIndexRoute
   '/resources/': typeof ResourcesIndexRoute
@@ -144,10 +135,9 @@ export interface FileRouteTypes {
     | '/register'
     | '/terms'
     | '/programs/$slug'
+    | '/resources/code-of-conduct'
     | '/resources/faq'
-    | '/resources/parents'
-    | '/resources/safety'
-    | '/resources/schools'
+    | '/resources/volunteer'
     | '/about/'
     | '/programs/'
     | '/resources/'
@@ -159,10 +149,9 @@ export interface FileRouteTypes {
     | '/register'
     | '/terms'
     | '/programs/$slug'
+    | '/resources/code-of-conduct'
     | '/resources/faq'
-    | '/resources/parents'
-    | '/resources/safety'
-    | '/resources/schools'
+    | '/resources/volunteer'
     | '/about'
     | '/programs'
     | '/resources'
@@ -174,10 +163,9 @@ export interface FileRouteTypes {
     | '/register'
     | '/terms'
     | '/programs/$slug'
+    | '/resources/code-of-conduct'
     | '/resources/faq'
-    | '/resources/parents'
-    | '/resources/safety'
-    | '/resources/schools'
+    | '/resources/volunteer'
     | '/about/'
     | '/programs/'
     | '/resources/'
@@ -190,10 +178,9 @@ export interface RootRouteChildren {
   RegisterRoute: typeof RegisterRoute
   TermsRoute: typeof TermsRoute
   ProgramsSlugRoute: typeof ProgramsSlugRoute
+  ResourcesCodeOfConductRoute: typeof ResourcesCodeOfConductRoute
   ResourcesFaqRoute: typeof ResourcesFaqRoute
-  ResourcesParentsRoute: typeof ResourcesParentsRoute
-  ResourcesSafetyRoute: typeof ResourcesSafetyRoute
-  ResourcesSchoolsRoute: typeof ResourcesSchoolsRoute
+  ResourcesVolunteerRoute: typeof ResourcesVolunteerRoute
   AboutIndexRoute: typeof AboutIndexRoute
   ProgramsIndexRoute: typeof ProgramsIndexRoute
   ResourcesIndexRoute: typeof ResourcesIndexRoute
@@ -257,25 +244,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/resources/schools': {
-      id: '/resources/schools'
-      path: '/resources/schools'
-      fullPath: '/resources/schools'
-      preLoaderRoute: typeof ResourcesSchoolsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/resources/safety': {
-      id: '/resources/safety'
-      path: '/resources/safety'
-      fullPath: '/resources/safety'
-      preLoaderRoute: typeof ResourcesSafetyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/resources/parents': {
-      id: '/resources/parents'
-      path: '/resources/parents'
-      fullPath: '/resources/parents'
-      preLoaderRoute: typeof ResourcesParentsRouteImport
+    '/resources/volunteer': {
+      id: '/resources/volunteer'
+      path: '/resources/volunteer'
+      fullPath: '/resources/volunteer'
+      preLoaderRoute: typeof ResourcesVolunteerRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/resources/faq': {
@@ -283,6 +256,13 @@ declare module '@tanstack/react-router' {
       path: '/resources/faq'
       fullPath: '/resources/faq'
       preLoaderRoute: typeof ResourcesFaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/code-of-conduct': {
+      id: '/resources/code-of-conduct'
+      path: '/resources/code-of-conduct'
+      fullPath: '/resources/code-of-conduct'
+      preLoaderRoute: typeof ResourcesCodeOfConductRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/programs/$slug': {
@@ -302,10 +282,9 @@ const rootRouteChildren: RootRouteChildren = {
   RegisterRoute: RegisterRoute,
   TermsRoute: TermsRoute,
   ProgramsSlugRoute: ProgramsSlugRoute,
+  ResourcesCodeOfConductRoute: ResourcesCodeOfConductRoute,
   ResourcesFaqRoute: ResourcesFaqRoute,
-  ResourcesParentsRoute: ResourcesParentsRoute,
-  ResourcesSafetyRoute: ResourcesSafetyRoute,
-  ResourcesSchoolsRoute: ResourcesSchoolsRoute,
+  ResourcesVolunteerRoute: ResourcesVolunteerRoute,
   AboutIndexRoute: AboutIndexRoute,
   ProgramsIndexRoute: ProgramsIndexRoute,
   ResourcesIndexRoute: ResourcesIndexRoute,

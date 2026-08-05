@@ -8,13 +8,13 @@ export const site = {
 	shortName: "ATA",
 	description:
 		"Building healthier communities through inclusive programs that bring families together. We provide safe, engaging activities for children, youth, and families to thrive.",
-	url: "https://activetogether.org",
+	url: "https://activetogetheractivities.org",
 	contact: {
-		email: "info@activetogether.org",
-		phone: "(555) 123-4567",
+		email: "info@activetogetheractivities.org",
+		phone: "647-289-3981",
 		address: {
-			line1: "123 Community Drive",
-			line2: "Your City, ST 12345",
+			line1: "29 Major Oaks Dr",
+			line2: "Brampton, ON L6V 3K1",
 		},
 	},
 	socials: [

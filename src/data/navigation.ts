@@ -36,9 +36,8 @@ export const navGroups: NavGroup[] = [
 		to: "/resources",
 		items: [
 			{ label: "All Resources", to: "/resources" },
-			{ label: "Parent Resources", to: "/resources/parents" },
-			{ label: "School Resources", to: "/resources/schools" },
-			{ label: "Safety Information", to: "/resources/safety" },
+			{ label: "Volunteer With Us", to: "/resources/volunteer" },
+			{ label: "Code of Conduct", to: "/resources/code-of-conduct" },
 			{ label: "FAQ", to: "/resources/faq" },
 		],
 	},
@@ -59,6 +58,6 @@ export const footerQuickLinks: NavLink[] = [
 
 /** Legal links shown in the footer bottom bar. */
 export const legalLinks: NavLink[] = [
-	{ label: "Privacy Policy", to: "/privacy" },
-	{ label: "Terms of Service", to: "/terms" },
+	// { label: "Privacy Policy", to: "/privacy" },
+	// { label: "Terms of Service", to: "/terms" },
 ];
