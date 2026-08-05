@@ -9,10 +9,11 @@ backend:
   name: github
   repo: Talukder0429/ATA
   branch: master
-  # Sveltia's hosted OAuth relay handles login — no proxy server to run.
-  # Register a GitHub OAuth app and set its callback to:
-  #   https://auth.sveltia.dev/callback
-  # See public/admin/README.md for the full setup steps.
+  # Token-only login: editors sign in with a GitHub Personal Access Token via
+  # the "Sign In with Token" button. This needs no OAuth app and no OAuth client
+  # server — the token is stored in the browser and used for API requests.
+  # See public/admin/README.md for how editors generate a token.
+  auth_methods: [token]
 
 # Uploaded media lands here. Program images are currently external URLs, so
 # this is only used if an editor uploads a file instead of pasting a URL.
@@ -21,6 +22,12 @@ public_folder: /ATA/uploads
 
 # Show a diff-style preview of pending changes before publishing.
 publish_mode: simple
+
+# Disable the built-in live preview pane. Sveltia's generic preview can't render
+# the site's real React components / Markdown, so it's misleading. The true
+# preview is the deployed site after publishing.
+editor:
+  preview: false
 
 collections:
   - name: programs
@@ -34,6 +41,8 @@ collections:
     format: yaml
     create: true
     delete: true
+    editor:
+      preview: false
     # Filename = slug. Lowercased, spaces to dashes, matching existing files.
     slug: '{{fields.name | lower | replace(" ", "-") | replace("&", "and")}}'
     identifier_field: name
