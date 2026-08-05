@@ -2,35 +2,25 @@ status: published
 order: 3
 name: Momentum March Break Camp
 tagline: Keep Moving. Keep Growing. Keep Having Fun.
+subtitle: ''
 cardSummary: A full-week March Break sports camp for Grades 3–12.
 cardImage: https://images.unsplash.com/photo-1569617084133-26942bb441f2
 heroImage: https://images.unsplash.com/photo-1776243773206-a29b683c97fb
-registrationUrl: "mailto:info@activetogetheractivities.org?subject=Momentum%20March%20Break%20Camp%20Registration"
+registrationUrl: mailto:info@activetogetheractivities.org?subject=Momentum%20March%20Break%20Camp%20Registration
+registrationLabel: ''
 quickFacts:
-  - { label: Schedule, value: "Mon, March 15th – Fri, March 19th · 9:00 AM – 5:00 PM" }
-  - { label: Ages, value: "Grades 3–12 · All skill levels welcome" }
-  - { label: Registration, value: "One-time weekly registration" }
-  - { label: Pricing, value: "TBD" }
+  - label: Schedule
+    value: Mon, March 15th – Fri, March 19th · 9:00 AM – 5:00 PM
+  - label: Ages
+    value: Grades 3–12 · All skill levels welcome
+  - label: Registration
+    value: One-time weekly registration
+  - label: Pricing
+    value: TBD
 sections:
   - type: prose
     heading: Program Overview
-    body: >
-      Momentum March Break Camp is a full-week camp that gives students
-      something exciting to look forward to during their school break. Each day
-      features a different mix of sports, games, and special activities, so no
-      two days feel the same. It's a chance to stay active, meet new people, and
-      spend March Break doing something fun instead of staying home. Registration
-      is now open — spaces are limited and fill on a first-come, first-served basis.
-  # - type: cards
-  #   heading: Why Families Choose Momentum March Break Camp
-  #   items:
-  #     - { icon: sun, title: Full-day supervised program }
-  #     - { icon: activity, title: Exciting variety of sports and activities }
-  #     - { icon: layers, title: New experiences every day }
-  #     - { icon: award, title: Build confidence and teamwork }
-  #     - { icon: heart, title: Make new friends }
-  #     - { icon: users, title: Professional coaching and caring staff }
-  #     - { icon: shield-check, title: Safe and inclusive environment }
+    body: Momentum March Break Camp is a full-week camp that gives students something exciting to look forward to during their school break. Each day features a different mix of sports, games, and special activities, so no two days feel the same. It's a chance to stay active, meet new people, and spend March Break doing something fun instead of staying home. Registration is now open — spaces are limited and fill on a first-come, first-served basis.
   - type: checklist
     heading: What's Included
     items:
@@ -44,22 +34,35 @@ sections:
       - End-of-week celebration
   - type: prose
     heading: Camp Activities
-    body: >
-      Throughout the week, campers participate in a wide variety of sports and
-      recreational activities, including soccer, basketball, volleyball,
-      badminton, cricket, dodgeball, flag football, obstacle courses, relay
-      races, fitness challenges, and team competitions. Special themed days and
-      camp-wide events ensure that every day offers a new adventure.
+    body: Throughout the week, campers participate in a wide variety of sports and recreational activities, including soccer, basketball, volleyball, badminton, cricket, dodgeball, flag football, obstacle courses, relay races, fitness challenges, and team competitions. Special themed days and camp-wide events ensure that every day offers a new adventure.
   - type: table
     heading: Sample Camp Schedule
     note: This is just a sample schedule.
-    columns: [ Day, Theme, Featured Activities ]
+    columns:
+      - Day
+      - Theme
+      - Featured Activities
     rows:
-      - cells: [ Monday, Welcome Day, "Icebreakers, team-building games, soccer, basketball" ]
-      - cells: [ Tuesday, Skills & Challenge Day, "Sports clinics, relay races, fitness challenges" ]
-      - cells: [ Wednesday, Adventure Day, "Multi-sport games, obstacle courses, scavenger hunt" ]
-      - cells: [ Thursday, Tournament Day, "Team competitions, championship games, sports challenges" ]
-      - cells: [ Friday, Celebration Day, "Camp Olympics, awards ceremony, fun activities, closing celebration" ]
+      - cells:
+          - Monday
+          - Welcome Day
+          - Icebreakers, team-building games, soccer, basketball
+      - cells:
+          - Tuesday
+          - Skills & Challenge Day
+          - Sports clinics, relay races, fitness challenges
+      - cells:
+          - Wednesday
+          - Adventure Day
+          - Multi-sport games, obstacle courses, scavenger hunt
+      - cells:
+          - Thursday
+          - Tournament Day
+          - Team competitions, championship games, sports challenges
+      - cells:
+          - Friday
+          - Celebration Day
+          - Camp Olympics, awards ceremony, fun activities, closing celebration
   - type: checklist
     heading: What to Bring
     items:
@@ -71,11 +74,7 @@ sections:
       - Any required medication (administered per our medication policy)
   - type: prose
     heading: Safety
-    body: >
-      The safety and well-being of every camper is our highest priority. Our
-      staff provide continuous supervision, secure attendance procedures, and a
-      safe, welcoming environment where every participant is encouraged to
-      learn, play, and have fun.
+    body: The safety and well-being of every camper is our highest priority. Our staff provide continuous supervision, secure attendance procedures, and a safe, welcoming environment where every participant is encouraged to learn, play, and have fun.
 closing:
   heading: Ready for an Unforgettable March Break?
   text: Give your child a week filled with sports, friendships, and unforgettable memories.
