@@ -6,38 +6,30 @@ subtitle: Year-Round Weekend Program
 cardSummary: Year-round weekend sports for Grades 3–13, all skill levels.
 cardImage: https://images.unsplash.com/photo-1549057736-889b732754a2
 heroImage: https://images.unsplash.com/photo-1604651683969-48adb1d8a570
-registrationUrl: "mailto:info@activetogetheractivities.org?subject=Weekend%20Sports%20Club%20Registration"
+registrationUrl: mailto:info@activetogetheractivities.org?subject=Weekend%20Sports%20Club%20Registration
+registrationLabel: ''
 quickFacts:
-  - { label: Schedule, value: "Saturday & Sunday, 11:00 AM – 6:00 PM" }
-  - { label: Ages, value: "Grades 3–13 · All skill levels welcome" }
-  - { label: Registration, value: "Monthly membership · Open year round" }
-  - { label: Pricing, value: "TBD" }
+  - label: Schedule
+    value: Saturday & Sunday, 11:00 AM – 6:00 PM
+  - label: Ages
+    value: Grades 3–13 · All skill levels welcome
+  - label: Registration
+    value: Monthly membership · Open year round
+  - label: Pricing
+    value: TBD
 sections:
   - type: prose
     heading: Program Overview
-    body: >
-      Weekend Sports Club is all about getting kids off the sidelines and into
-      the game. Every weekend, participants take part in a variety of sports,
-      skill-building activities, and friendly competitions that keep them moving
-      and having fun. Whether they already love sports or are trying something
-      new, everyone is welcome to join in.
-  # - type: cards
-  #   heading: Why Families Choose Weekend Sports Club
-  #   items:
-  #     - { icon: users, title: Professional coaching and supervision }
-  #     - { icon: sun, title: Fun, active weekends }
-  #     - { icon: layers, title: Learn multiple sports throughout the year }
-  #     - { icon: activity, title: Improve athletic skills and fitness }
-  #     - { icon: award, title: Build confidence and teamwork }
-  #     - { icon: heart, title: Make new friends }
-  #     - { icon: trophy, title: Friendly competitions and tournaments }
-  #     - { icon: shield-check, title: Safe and inclusive environment }
+    body: Weekend Sports Club is all about getting kids off the sidelines and into the game. Every weekend, participants take part in a variety of sports, skill-building activities, and friendly competitions that keep them moving and having fun. Whether they already love sports or are trying something new, everyone is welcome to join in.
   - type: cards
     heading: Age Divisions
     items:
-      - { title: Junior Division, text: "Grades 3–5" }
-      - { title: Intermediate Division, text: "Grades 6–8" }
-      - { title: Senior Division, text: "Grades 9–12" }
+      - title: Junior Division
+        text: Grades 3–5
+      - title: Intermediate Division
+        text: Grades 6–8
+      - title: Senior Division
+        text: Grades 9–12
   - type: checklist
     heading: What's Included
     items:
@@ -52,18 +44,23 @@ sections:
       - Achievement recognition
   - type: prose
     heading: Sports & Activities
-    body: >
-      Participants rotate through a variety of sports and activities throughout
-      the year, including soccer, basketball, volleyball, badminton, cricket,
-      flag football, dodgeball, fitness challenges, and cooperative games.
-      Regular tournaments and themed activity days keep every weekend exciting.
+    body: Participants rotate through a variety of sports and activities throughout the year, including soccer, basketball, volleyball, badminton, cricket, flag football, dodgeball, fitness challenges, and cooperative games. Regular tournaments and themed activity days keep every weekend exciting.
   - type: table
     heading: Weekend Program Schedule
     note: This is just a sample schedule.
-    columns: [ Day, Theme, Featured Activities ]
+    columns:
+      - Day
+      - Theme
+      - Featured Activities
     rows:
-      - cells: [ Saturday, Skills & Development, "Sport-specific training, drills, fitness, leadership activities" ]
-      - cells: [ Sunday, Competition & Recreation, "Friendly games, tournaments, multi-sport challenges, team competitions" ]
+      - cells:
+          - Saturday
+          - Skills & Development
+          - Sport-specific training, drills, fitness, leadership activities
+      - cells:
+          - Sunday
+          - Competition & Recreation
+          - Friendly games, tournaments, multi-sport challenges, team competitions
   - type: checklist
     heading: What to Bring
     items:
@@ -74,11 +71,7 @@ sections:
       - Weather-appropriate clothing for outdoor activities
   - type: prose
     heading: Safety
-    body: >
-      The safety and well-being of every participant is our highest priority.
-      Staff provide continuous supervision, maintain secure attendance
-      procedures, and foster a respectful, inclusive environment where every
-      participant can learn and have fun.
+    body: The safety and well-being of every participant is our highest priority. Staff provide continuous supervision, maintain secure attendance procedures, and foster a respectful, inclusive environment where every participant can learn and have fun.
 closing:
   heading: Ready to Join?
   text: Spend your weekends staying active, learning new skills, and making lasting friendships through sport.
