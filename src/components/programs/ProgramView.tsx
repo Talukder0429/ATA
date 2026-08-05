@@ -1,13 +1,18 @@
+import { Link } from "@tanstack/react-router";
 import { Section } from "@/components/layout/Section";
 import { FactsRail } from "@/components/programs/FactsRail";
 import { ProgramSection } from "@/components/programs/ProgramSection";
 import { Button } from "@/components/ui/button";
 import type { Program } from "@/data/program-types";
 
+/** Trims and falls back when a value is missing or an empty/whitespace string. */
+const orDefault = (value: string | undefined, fallback: string): string =>
+	value?.trim() ? value : fallback;
+
 export const ProgramView = ({ program }: { program: Program }) => {
 	const sections = program.sections ?? [];
 	const heroImage = program.heroImage ?? program.cardImage;
-	const registerLabel = program.registrationLabel ?? "Register Now";
+	const registerLabel = orDefault(program.registrationLabel, "Register Now");
 
 	return (
 		<article>
@@ -38,7 +43,7 @@ export const ProgramView = ({ program }: { program: Program }) => {
 							{program.cardSummary}
 						</p>
 						<Button asChild size="lg" className="mt-6 w-fit">
-							<a href={program.registrationUrl}>{registerLabel}</a>
+							<Link to="/register">{registerLabel}</Link>
 						</Button>
 					</div>
 				</div>
@@ -62,7 +67,7 @@ export const ProgramView = ({ program }: { program: Program }) => {
 							{program.cardSummary}
 						</p>
 						<Button asChild size="lg" className="mt-6">
-							<a href={program.registrationUrl}>{registerLabel}</a>
+							<Link to="/register">{registerLabel}</Link>
 						</Button>
 					</div>
 				</div>
@@ -109,9 +114,9 @@ export const ProgramView = ({ program }: { program: Program }) => {
 							{program.closing.text}
 						</p>
 						<Button asChild size="lg" className="mt-6">
-							<a href={program.registrationUrl}>
-								{program.closing.buttonLabel ?? "Register Today"}
-							</a>
+							<Link to="/register">
+								{orDefault(program.closing.buttonLabel, "Register Today")}
+							</Link>
 						</Button>
 					</div>
 				</Section>

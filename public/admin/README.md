@@ -9,28 +9,26 @@ and redeploys automatically.
 - **How changes go live:** saving commits to the `master` branch → the GitHub
   Pages workflow rebuilds → live in ~1–2 minutes.
 
-## One-time setup: GitHub OAuth app
+## Login: GitHub Personal Access Token
 
-Sveltia authenticates editors against GitHub using its **hosted** OAuth relay,
-so there's no server for us to run. You only need to register an OAuth app once.
+Login is **token-only** (`auth_methods: [token]` in `config.yml`). There is no
+OAuth app and no OAuth client server to deploy — editors sign in by pasting a
+GitHub Personal Access Token. This suits a small team of trusted editors.
 
-1. Go to **GitHub → Settings → Developer settings → OAuth Apps → New OAuth App**
-   (org-level or personal — it must have access to the `Talukder0429/ATA` repo).
-2. Fill in:
-   - **Application name:** `ATA Content Admin`
-   - **Homepage URL:** `https://<your-domain>/ATA/admin/`
-   - **Authorization callback URL:** `https://auth.sveltia.dev/callback`
-3. Create it, then copy the **Client ID** and generate a **Client Secret**.
-4. Register the credentials with the Sveltia auth relay (or self-host the tiny
-   relay if you prefer full control): see
-   <https://github.com/sveltia/sveltia-cms#configuring-the-github-backend>.
-5. Give each editor a GitHub account with **write access** to the repo
-   (Repo → Settings → Collaborators), or add them to a team that has it.
+**One-time, per editor:**
 
-## Editor access
+1. The editor needs a GitHub account with **write access** to `Talukder0429/ATA`
+   (Repo → Settings → Collaborators), or membership in a team that has it.
+2. Go to `/admin/` and click **Sign In with Token**.
+3. Follow the link in the dialog — it opens GitHub's token page with the needed
+   scopes pre-selected. Generate the token (a fine-grained token scoped to just
+   this repo is ideal), then paste it back into the dialog.
 
-- Editors log in at `/admin/` with **Login with GitHub**.
-- They need write access to the repo (step 5 above). No local setup, no CLI.
+The token is stored in the browser's local storage for future API requests, so
+each editor pastes it once per browser. No local setup, no CLI.
+
+> Prefer to keep tokens short-lived? Set an expiry on the PAT; editors just
+> re-paste a fresh one when it lapses.
 
 ## Notes & limits
 

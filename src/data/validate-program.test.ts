@@ -6,7 +6,6 @@ const valid = {
 	order: 1,
 	name: "Game Time",
 	cardSummary: "After-school sports.",
-	registrationUrl: "mailto:info@x.org",
 	sections: [{ type: "prose", body: "Hello" }],
 };
 

@@ -86,7 +86,6 @@ export interface ProgramFrontmatter {
 	cardImage?: string;
 	/** Optional dedicated hero image (URL). Falls back to cardImage, then a text hero. */
 	heroImage?: string;
-	registrationUrl: string;
 	registrationLabel?: string;
 	quickFacts?: QuickFact[];
 	sections?: ProgramBlock[];

@@ -5,23 +5,19 @@ const files = {
 	"../content/programs/b.yaml": `status: published
 order: 2
 name: Bravo
-cardSummary: Summary.
-registrationUrl: "mailto:x@x.org"`,
+cardSummary: Summary.`,
 	"../content/programs/a.yaml": `status: published
 order: 1
 name: Alpha
-cardSummary: Summary.
-registrationUrl: "mailto:x@x.org"`,
+cardSummary: Summary.`,
 	"../content/programs/hidden.yaml": `status: hidden
 order: 1
 name: Hidden
-cardSummary: Summary.
-registrationUrl: "mailto:x@x.org"`,
+cardSummary: Summary.`,
 	"../content/programs/draft.yaml": `status: draft
 order: 1
 name: Draft
-cardSummary: Summary.
-registrationUrl: "mailto:x@x.org"`,
+cardSummary: Summary.`,
 };
 
 describe("buildPrograms", () => {

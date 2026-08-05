@@ -94,8 +94,6 @@ export const validateProgram = (data: unknown, slug: string): Program => {
 	if (typeof data.name !== "string") fail(slug, `"name" is required`);
 	if (typeof data.cardSummary !== "string")
 		fail(slug, `"cardSummary" is required`);
-	if (typeof data.registrationUrl !== "string")
-		fail(slug, `"registrationUrl" is required`);
 
 	if (data.quickFacts !== undefined) {
 		if (!Array.isArray(data.quickFacts))

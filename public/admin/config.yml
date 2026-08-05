@@ -85,13 +85,6 @@ collections:
         choose_url: true
         hint: Upload or paste a URL. Falls back to the card image if empty.
 
-      - name: registrationUrl
-        label: Registration URL
-        widget: string
-        pattern:
-          ['^(https://|mailto:)', 'Must start with https:// or mailto:.']
-        hint: Where the Register button links (e.g. the Google Form or a mailto:).
-
       - name: registrationLabel
         label: Register button label
         widget: string

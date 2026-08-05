@@ -9,7 +9,6 @@ const base: Program = {
 	order: 1,
 	name: "X",
 	cardSummary: "s",
-	registrationUrl: "mailto:x@x.org",
 };
 
 describe("FactsRail", () => {
