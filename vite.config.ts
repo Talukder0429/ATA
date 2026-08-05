@@ -4,6 +4,8 @@ import tailwindcss from "@tailwindcss/vite";
 import { tanstackRouter } from "@tanstack/router-plugin/vite";
 import react, { reactCompilerPreset } from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
+import { adminDev } from "./scripts/admin-dev-plugin";
+import { sitemap } from "./scripts/sitemap-plugin";
 
 // Deployed to https://<user>.github.io/ATA/ — served from a sub-path in CI,
 // but from the root during local dev.
@@ -25,5 +27,7 @@ export default defineConfig({
 		}),
 		react(),
 		babel({ presets: [reactCompilerPreset()] }),
+		sitemap(),
+		adminDev(),
 	],
 });

@@ -27,7 +27,7 @@ describe("ProgramSection", () => {
 				block={{
 					type: "table",
 					columns: ["Day", "Theme"],
-					rows: [["Mon", "Sports"]],
+					rows: [{ cells: ["Mon", "Sports"] }],
 				}}
 			/>,
 		);

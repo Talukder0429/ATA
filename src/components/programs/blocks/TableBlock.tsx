@@ -17,8 +17,8 @@ export const TableBlock = ({ block }: { block: TableBlockData }) => (
 				</thead>
 				<tbody>
 					{block.rows.map((row) => (
-						<tr key={row.join("|")} className="border-t even:bg-muted/40">
-							{row.map((cell, i) => (
+						<tr key={row.cells.join("|")} className="border-t even:bg-muted/40">
+							{row.cells.map((cell, i) => (
 								<td
 									key={`${block.columns[i] ?? i}-${cell}`}
 									className="p-3 text-muted-foreground"

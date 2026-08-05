@@ -35,10 +35,16 @@ describe("validateProgram", () => {
 		expect(() => validateProgram(bad, "game-time")).toThrow(/carousel/);
 	});
 
-	it("throws when a table row is not an array of strings", () => {
+	it("throws when a table row is not an object with string cells", () => {
 		const bad = {
 			...valid,
-			sections: [{ type: "table", columns: ["A"], rows: [["ok"], [1]] }],
+			sections: [
+				{
+					type: "table",
+					columns: ["A"],
+					rows: [{ cells: ["ok"] }, { cells: [1] }],
+				},
+			],
 		};
 		expect(() => validateProgram(bad, "game-time")).toThrow(/table/);
 	});

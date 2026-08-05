@@ -35,12 +35,16 @@ export interface CardsBlock {
 	items: CardItem[];
 }
 
+export interface TableRow {
+	cells: string[];
+}
+
 export interface TableBlock {
 	type: "table";
 	heading?: string;
 	note?: string;
 	columns: string[];
-	rows: string[][];
+	rows: TableRow[];
 }
 
 export interface PricingBlock {

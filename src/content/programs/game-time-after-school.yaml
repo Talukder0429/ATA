@@ -69,11 +69,11 @@ sections:
     note: This is just a sample schedule.
     columns: [ Day, Theme, Featured Activities ]
     rows:
-      - [ Monday, Team Sports, "Soccer, Basketball, Team-Building Games" ]
-      - [ Tuesday, Skills Development, "Sport-specific drills, agility training, fitness challenges" ]
-      - [ Wednesday, Competition Day, "Friendly matches, mini tournaments, relay races" ]
-      - [ Thursday, Multi-Sport Adventure, "Volleyball, Badminton, Cricket, Dodgeball, Flag Football" ]
-      - [ Friday, Fun Friday, "Championship games, obstacle courses, theme days, awards, recreation" ]
+      - cells: [ Monday, Team Sports, "Soccer, Basketball, Team-Building Games" ]
+      - cells: [ Tuesday, Skills Development, "Sport-specific drills, agility training, fitness challenges" ]
+      - cells: [ Wednesday, Competition Day, "Friendly matches, mini tournaments, relay races" ]
+      - cells: [ Thursday, Multi-Sport Adventure, "Volleyball, Badminton, Cricket, Dodgeball, Flag Football" ]
+      - cells: [ Friday, Fun Friday, "Championship games, obstacle courses, theme days, awards, recreation" ]
   - type: checklist
     heading: What to Bring
     items:

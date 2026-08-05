@@ -1,0 +1,203 @@
+# Sveltia CMS configuration.
+# Docs: https://github.com/sveltia/sveltia-cms
+#
+# This maps the program YAML schema (see src/data/program-types.ts) to a
+# form-based editor. Saving commits the edited file to `branch` on GitHub,
+# which triggers the Pages deploy workflow (~1-2 min until live).
+
+backend:
+  name: github
+  repo: Talukder0429/ATA
+  branch: master
+  # Sveltia's hosted OAuth relay handles login — no proxy server to run.
+  # Register a GitHub OAuth app and set its callback to:
+  #   https://auth.sveltia.dev/callback
+  # See public/admin/README.md for the full setup steps.
+
+# Uploaded media lands here. Program images are currently external URLs, so
+# this is only used if an editor uploads a file instead of pasting a URL.
+media_folder: public/uploads
+public_folder: /ATA/uploads
+
+# Show a diff-style preview of pending changes before publishing.
+publish_mode: simple
+
+collections:
+  - name: programs
+    label: Programs
+    label_singular: Program
+    description: >
+      Each program is one file. "Display order" controls ordering; set
+      "Status" to draft or hidden to keep a program off the live site.
+    folder: src/content/programs
+    extension: yaml
+    format: yaml
+    create: true
+    delete: true
+    # Filename = slug. Lowercased, spaces to dashes, matching existing files.
+    slug: '{{fields.name | lower | replace(" ", "-") | replace("&", "and")}}'
+    identifier_field: name
+    summary: '{{fields.name}} — {{fields.status}} (order {{fields.order}})'
+    fields:
+      - name: status
+        label: Status
+        widget: select
+        options: [published, hidden, draft]
+        default: published
+        hint: Only "published" programs appear on the live site.
+
+      - name: order
+        label: Display order
+        widget: number
+        value_type: int
+        default: 1
+        hint: Lower numbers appear first.
+
+      - { name: name, label: Program name, widget: string }
+      - { name: tagline, label: Tagline, widget: string, required: false }
+      - { name: subtitle, label: Subtitle, widget: string, required: false }
+
+      - name: cardSummary
+        label: Card summary
+        widget: text
+        hint: Short blurb shown on the programs listing card.
+
+      - name: cardImage
+        label: Card image
+        widget: image
+        required: false
+        choose_url: true
+        hint: Upload an image or paste a hosted https:// URL. Shown on the listing card.
+
+      - name: heroImage
+        label: Hero image
+        widget: image
+        required: false
+        choose_url: true
+        hint: Upload or paste a URL. Falls back to the card image if empty.
+
+      - name: registrationUrl
+        label: Registration URL
+        widget: string
+        pattern:
+          ['^(https://|mailto:)', 'Must start with https:// or mailto:.']
+        hint: Where the Register button links (e.g. the Google Form or a mailto:).
+
+      - name: registrationLabel
+        label: Register button label
+        widget: string
+        required: false
+        default: Register Now
+
+      - name: quickFacts
+        label: Quick facts
+        label_singular: Fact
+        widget: list
+        required: false
+        summary: '{{fields.label}}: {{fields.value}}'
+        fields:
+          - { name: label, label: Label, widget: string }
+          - { name: value, label: Value, widget: string }
+
+      - name: sections
+        label: Content sections
+        label_singular: Section
+        widget: list
+        required: false
+        types:
+          - name: prose
+            label: Prose (paragraph)
+            summary: 'Prose: {{fields.heading}}'
+            fields:
+              - { name: heading, label: Heading, widget: string, required: false }
+              - name: body
+                label: Body
+                widget: markdown
+                minimal: true
+                hint: Supports Markdown (bold, links, lists).
+
+          - name: checklist
+            label: Checklist
+            summary: 'Checklist: {{fields.heading}}'
+            fields:
+              - { name: heading, label: Heading, widget: string, required: false }
+              - name: items
+                label: Items
+                widget: list
+                field: { name: item, label: Item, widget: string }
+
+          - name: cards
+            label: Cards
+            summary: 'Cards: {{fields.heading}}'
+            fields:
+              - { name: heading, label: Heading, widget: string, required: false }
+              - name: items
+                label: Cards
+                label_singular: Card
+                widget: list
+                summary: '{{fields.title}}'
+                fields:
+                  - name: icon
+                    label: Icon
+                    widget: select
+                    required: false
+                    options:
+                      - activity
+                      - award
+                      - book-open
+                      - bus
+                      - check
+                      - heart
+                      - layers
+                      - shield-check
+                      - sun
+                      - trophy
+                      - users
+                  - { name: title, label: Title, widget: string }
+                  - { name: text, label: Text, widget: string, required: false }
+
+          - name: table
+            label: Table
+            summary: 'Table: {{fields.heading}}'
+            fields:
+              - { name: heading, label: Heading, widget: string, required: false }
+              - { name: note, label: Note, widget: string, required: false }
+              - name: columns
+                label: Column headers
+                widget: list
+                field: { name: column, label: Column, widget: string }
+              - name: rows
+                label: Rows
+                label_singular: Row
+                widget: list
+                summary: '{{fields.cells}}'
+                fields:
+                  - name: cells
+                    label: Cells (one per column, in order)
+                    widget: list
+                    field: { name: cell, label: Cell, widget: string }
+
+          - name: pricing
+            label: Pricing
+            summary: 'Pricing: {{fields.heading}}'
+            fields:
+              - { name: heading, label: Heading, widget: string, required: false }
+              - { name: note, label: Note, widget: string, required: false }
+              - name: items
+                label: Tiers
+                label_singular: Tier
+                widget: list
+                summary: '{{fields.label}} — {{fields.price}}'
+                fields:
+                  - { name: label, label: Label, widget: string }
+                  - { name: price, label: Price, widget: string }
+                  - { name: note, label: Note, widget: string, required: false }
+
+      - name: closing
+        label: Closing call-to-action
+        widget: object
+        required: false
+        fields:
+          - { name: heading, label: Heading, widget: string }
+          - { name: text, label: Text, widget: text }
+          - { name: buttonLabel, label: Button label, widget: string, required: false }

@@ -62,8 +62,8 @@ sections:
     note: This is just a sample schedule.
     columns: [ Day, Theme, Featured Activities ]
     rows:
-      - [ Saturday, Skills & Development, "Sport-specific training, drills, fitness, leadership activities" ]
-      - [ Sunday, Competition & Recreation, "Friendly games, tournaments, multi-sport challenges, team competitions" ]
+      - cells: [ Saturday, Skills & Development, "Sport-specific training, drills, fitness, leadership activities" ]
+      - cells: [ Sunday, Competition & Recreation, "Friendly games, tournaments, multi-sport challenges, team competitions" ]
   - type: checklist
     heading: What to Bring
     items:

@@ -55,11 +55,11 @@ sections:
     note: This is just a sample schedule.
     columns: [ Day, Theme, Featured Activities ]
     rows:
-      - [ Monday, Welcome Day, "Icebreakers, team-building games, soccer, basketball" ]
-      - [ Tuesday, Skills & Challenge Day, "Sports clinics, relay races, fitness challenges" ]
-      - [ Wednesday, Adventure Day, "Multi-sport games, obstacle courses, scavenger hunt" ]
-      - [ Thursday, Tournament Day, "Team competitions, championship games, sports challenges" ]
-      - [ Friday, Celebration Day, "Camp Olympics, awards ceremony, fun activities, closing celebration" ]
+      - cells: [ Monday, Welcome Day, "Icebreakers, team-building games, soccer, basketball" ]
+      - cells: [ Tuesday, Skills & Challenge Day, "Sports clinics, relay races, fitness challenges" ]
+      - cells: [ Wednesday, Adventure Day, "Multi-sport games, obstacle courses, scavenger hunt" ]
+      - cells: [ Thursday, Tournament Day, "Team competitions, championship games, sports challenges" ]
+      - cells: [ Friday, Celebration Day, "Camp Olympics, awards ceremony, fun activities, closing celebration" ]
   - type: checklist
     heading: What to Bring
     items:

@@ -51,9 +51,12 @@ const validateBlock = (
 				fail(slug, `table section ${i} needs string "columns"`);
 			if (
 				!Array.isArray(block.rows) ||
-				!block.rows.every((row) => isStringArray(row))
+				!block.rows.every((row) => isObject(row) && isStringArray(row.cells))
 			) {
-				fail(slug, `table section ${i} needs "rows" of string arrays`);
+				fail(
+					slug,
+					`table section ${i} needs "rows", each an object with string "cells"`,
+				);
 			}
 			break;
 		case "pricing": {
