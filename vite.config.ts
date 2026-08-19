@@ -7,7 +7,7 @@ import { defineConfig } from "vite";
 import { adminDev } from "./scripts/admin-dev-plugin";
 import { sitemap } from "./scripts/sitemap-plugin";
 
-// Deployed to https://<user>.github.io/ATA/ — served from a sub-path in CI,
+// Deployed to https://<user>.github.io/ATA/ - served from a sub-path in CI,
 // but from the root during local dev.
 const base = process.env.GITHUB_ACTIONS ? "/ATA/" : "/";
 

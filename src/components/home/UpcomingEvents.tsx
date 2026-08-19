@@ -20,7 +20,7 @@ const events: EventItem[] = [
 		month: "JUL",
 		day: "12",
 		title: "Summer Camp Kick-Off",
-		time: "9:00 AM – 12:00 PM",
+		time: "9:00 AM - 12:00 PM",
 		location: "Community Drive Field",
 	},
 	{
@@ -28,7 +28,7 @@ const events: EventItem[] = [
 		month: "JUL",
 		day: "26",
 		title: "Family Fun Day",
-		time: "11:00 AM – 3:00 PM",
+		time: "11:00 AM - 3:00 PM",
 		location: "Riverside Park",
 	},
 	{
@@ -36,7 +36,7 @@ const events: EventItem[] = [
 		month: "AUG",
 		day: "08",
 		title: "Youth Sports Night",
-		time: "6:00 PM – 8:30 PM",
+		time: "6:00 PM - 8:30 PM",
 		location: "ATA Main Gym",
 	},
 ];
@@ -49,7 +49,7 @@ export function UpcomingEvents() {
 					Upcoming Events
 				</h2>
 				<p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-					Join us at our next community gathering — everyone's welcome
+					Join us at our next community gathering - everyone's welcome
 				</p>
 			</div>
 

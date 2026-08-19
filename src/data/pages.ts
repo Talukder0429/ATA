@@ -18,7 +18,7 @@ export const pages = {
 	"/about": {
 		title: "About Us",
 		description:
-			"Learn more about Active Together Activities — who we are, what drives us, and the community we serve.",
+			"Learn more about Active Together Activities - who we are, what drives us, and the community we serve.",
 	},
 	"/programs": {
 		title: "Our Programs",
@@ -69,7 +69,7 @@ export const pages = {
 
 export type PagePath = keyof typeof pages;
 
-/** Typed accessor — widens the narrow `as const` entry back to PageMeta. */
+/** Typed accessor - widens the narrow `as const` entry back to PageMeta. */
 export function getPage(path: PagePath): PageMeta {
 	return pages[path];
 }

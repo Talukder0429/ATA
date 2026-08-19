@@ -5,13 +5,13 @@
 @custom-variant dark (&:is(.dark *));
 
 /* ---------------------------------------------------------------------------
- * Brand palette (utility scale) — `bg-primary-500`, `text-secondary-600`, etc.
+ * Brand palette (utility scale) - `bg-primary-500`, `text-secondary-600`, etc.
  * Kept alongside the shadcn semantic tokens below. The semantic `--primary`
  * (no numeric suffix) drives shadcn components; these scales are for bespoke
  * brand styling.
  * ------------------------------------------------------------------------- */
 @theme {
-	/* Primary — orange (the logo's bright #ff751f). Drives CTAs, links, focus.
+	/* Primary - orange (the logo's bright #ff751f). Drives CTAs, links, focus.
 	 * Note: white text needs primary-700 to pass AA; 500/600 are non-text only. */
 	--color-primary-50: #fff4ec;
 	--color-primary-100: #ffe4d3;
@@ -24,7 +24,7 @@
 	--color-primary-800: #9a3c0e;
 	--color-primary-900: #7c3210;
 
-	/* Secondary — warm slate. Grounding color for the CTA band, dark surfaces,
+	/* Secondary - warm slate. Grounding color for the CTA band, dark surfaces,
 	 * and table headers (never a primary-CTA button fill). */
 	--color-secondary-50: #f4f5f7;
 	--color-secondary-100: #e5e7ec;
@@ -37,7 +37,7 @@
 	--color-secondary-800: #2c3442;
 	--color-secondary-900: #262d38;
 
-	/* Accent — gold (the logo's #ffbd59). Highlights, kickers, badges. */
+	/* Accent - gold (the logo's #ffbd59). Highlights, kickers, badges. */
 	--color-accent-50: #fffaf0;
 	--color-accent-100: #fff1d6;
 	--color-accent-200: #ffe0a8;
@@ -49,7 +49,7 @@
 	--color-accent-800: #855012;
 	--color-accent-900: #6e4212;
 
-	/* Brand red — the logo's red. Sparing accent; not wired to a shadcn token. */
+	/* Brand red - the logo's red. Sparing accent; not wired to a shadcn token. */
 	--color-brand-red-500: #d63333;
 	--color-brand-red-600: #c72323;
 	--color-brand-red-700: #a51d1d;
@@ -75,7 +75,7 @@
 	--popover: #ffffff;
 	--popover-foreground: #1f2937;
 
-	--primary: #c24a08; /* primary-700, orange CTA — AA for white button text */
+	--primary: #c24a08; /* primary-700, orange CTA - AA for white button text */
 	--primary-foreground: #ffffff;
 
 	--secondary: #3c4657; /* secondary-600, warm slate */

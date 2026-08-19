@@ -20,7 +20,7 @@ export const buildPrograms = (
 		} catch (error) {
 			const msg = error instanceof Error ? error.message : String(error);
 			throw new Error(
-				`Invalid program "${slug}": failed to parse YAML — ${msg}`,
+				`Invalid program "${slug}": failed to parse YAML - ${msg}`,
 			);
 		}
 		return validateProgram(data, slug);

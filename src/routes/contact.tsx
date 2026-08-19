@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { MailIcon, MapPinIcon, PhoneIcon } from "lucide-react";
+import { MailIcon, PhoneIcon } from "lucide-react";
 import { Page } from "@/components/layout/Page";
 import { pages } from "@/data/pages";
 import { site } from "@/data/site";
@@ -7,11 +7,11 @@ import { seo } from "@/lib/seo";
 
 const page = pages["/contact"];
 
-const mapQuery = encodeURIComponent(
-	`${site.contact.address.line1}, ${site.contact.address.line2}`,
-);
-const mapEmbedSrc = `https://www.google.com/maps?q=${mapQuery}&output=embed`;
-const mapLinkHref = `https://www.google.com/maps/search/?api=1&query=${mapQuery}`;
+// const mapQuery = encodeURIComponent(
+// 	`${site.contact.address.line1}, ${site.contact.address.line2}`,
+// );
+// const mapEmbedSrc = `https://www.google.com/maps?q=${mapQuery}&output=embed`;
+// const mapLinkHref = `https://www.google.com/maps/search/?api=1&query=${mapQuery}`;
 
 export const Route = createFileRoute("/contact")({
 	head: () => seo({ title: page.title, description: page.description }),
@@ -49,7 +49,7 @@ function RouteComponent() {
 						</span>
 					</a>
 
-					<a
+					{/* <a
 						href={mapLinkHref}
 						target="_blank"
 						rel="noopener noreferrer"
@@ -64,10 +64,10 @@ function RouteComponent() {
 							<br />
 							{site.contact.address.line2}
 						</span>
-					</a>
+					</a> */}
 				</div>
 
-				<div className="overflow-hidden rounded-xl border shadow-sm">
+				{/* <div className="overflow-hidden rounded-xl border shadow-sm">
 					<iframe
 						title={`Map showing ${site.name} at ${site.contact.address.line1}`}
 						src={mapEmbedSrc}
@@ -76,7 +76,7 @@ function RouteComponent() {
 						referrerPolicy="no-referrer-when-downgrade"
 						allowFullScreen
 					/>
-				</div>
+				</div> */}
 			</div>
 		</Page>
 	);

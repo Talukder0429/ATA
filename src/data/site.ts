@@ -1,6 +1,6 @@
 /**
  * Single source of truth for organization-wide info (name, contact, socials).
- * Referenced by the Header, Footer, contact/register pages, and SEO defaults —
+ * Referenced by the Header, Footer, contact/register pages, and SEO defaults -
  * change it here, not inline in components.
  */
 export const site = {

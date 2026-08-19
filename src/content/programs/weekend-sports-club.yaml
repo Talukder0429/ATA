@@ -3,17 +3,17 @@ order: 2
 name: Weekend Sports Club
 tagline: Stay Active. Learn Together. Compete with Confidence.
 subtitle: Year-Round Weekend Program
-cardSummary: Year-round weekend sports for Grades 3–13, all skill levels.
+cardSummary: Year-round weekend sports for Grades 3-8, all skill levels.
 cardImage: https://images.unsplash.com/photo-1549057736-889b732754a2
 heroImage: https://images.unsplash.com/photo-1604651683969-48adb1d8a570
 registrationLabel: ''
 quickFacts:
   - label: Schedule
-    value: Saturday & Sunday, 11:00 AM – 6:00 PM
+    value: Saturday & Sunday, 11:00 AM - 5:00 PM
   - label: Ages
-    value: Grades 3–13 · All skill levels welcome
+    value: Grades 3-8 | All skill levels welcome
   - label: Registration
-    value: Monthly membership · Open year round
+    value: Monthly membership | Open year round
   - label: Pricing
     value: TBD
 sections:
@@ -24,11 +24,9 @@ sections:
     heading: Age Divisions
     items:
       - title: Junior Division
-        text: Grades 3–5
+        text: Grades 3-5
       - title: Intermediate Division
-        text: Grades 6–8
-      - title: Senior Division
-        text: Grades 9–12
+        text: Grades 6-8
   - type: checklist
     heading: What's Included
     items:

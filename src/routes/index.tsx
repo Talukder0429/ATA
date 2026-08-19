@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { CTA } from "@/components/home/CTA";
 import { Hero } from "@/components/home/Hero";
 import { ProgramsGrid } from "@/components/home/ProgramsGrid";
-import { Testimonials } from "@/components/home/Testimonials";
+// import { Testimonials } from "@/components/home/Testimonials";
 import { UpcomingEvents } from "@/components/home/UpcomingEvents";
 import { seo } from "@/lib/seo";
 
@@ -21,7 +21,7 @@ function RouteComponent() {
 			<Hero />
 			<ProgramsGrid />
 			<UpcomingEvents />
-			<Testimonials />
+			{/* <Testimonials /> */}
 			<CTA />
 		</>
 	);

@@ -3,15 +3,15 @@ order: 3
 name: Momentum March Break Camp
 tagline: Keep Moving. Keep Growing. Keep Having Fun.
 subtitle: ''
-cardSummary: A full-week March Break sports camp for Grades 3–12.
+cardSummary: A full-week March Break sports camp for Grades 3-12.
 cardImage: https://images.unsplash.com/photo-1569617084133-26942bb441f2
 heroImage: https://images.unsplash.com/photo-1776243773206-a29b683c97fb
 registrationLabel: ''
 quickFacts:
   - label: Schedule
-    value: Mon, March 15th – Fri, March 19th · 9:00 AM – 5:00 PM
+    value: Mon, March 15th - Fri, March 19th | 9:00 AM - 5:00 PM
   - label: Ages
-    value: Grades 3–12 · All skill levels welcome
+    value: Grades 3-12 | All skill levels welcome
   - label: Registration
     value: One-time weekly registration
   - label: Pricing
@@ -19,7 +19,7 @@ quickFacts:
 sections:
   - type: prose
     heading: Program Overview
-    body: Momentum March Break Camp is a full-week camp that gives students something exciting to look forward to during their school break. Each day features a different mix of sports, games, and special activities, so no two days feel the same. It's a chance to stay active, meet new people, and spend March Break doing something fun instead of staying home. Registration is now open — spaces are limited and fill on a first-come, first-served basis.
+    body: Momentum March Break Camp is a full-week camp that gives students something exciting to look forward to during their school break. Each day features a different mix of sports, games, and special activities, so no two days feel the same. It's a chance to stay active, meet new people, and spend March Break doing something fun instead of staying home. Registration is now open - spaces are limited and fill on a first-come, first-served basis.
   - type: checklist
     heading: What's Included
     items:

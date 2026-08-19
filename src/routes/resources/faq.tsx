@@ -9,7 +9,7 @@ const page = pages["/resources/faq"];
 const faqs = [
 	{
 		q: "What age group are the programs for?",
-		a: "Our programs are designed for school-aged youth, generally spanning Grades 3–13. Exact age and grade divisions vary by program, so check the individual program page for the details that apply.",
+		a: "Our programs are designed for school-aged youth, generally spanning Grades 3-13. Exact age and grade divisions vary by program, so check the individual program page for the details that apply.",
 	},
 	{
 		q: "What kind of activities do you offer?",
@@ -17,11 +17,11 @@ const faqs = [
 	},
 	{
 		q: "Where do the programs take place?",
-		a: "Programs are held at local public schools in Scarborough and North York. These locations provide safe and accessible spaces for youth from different schools to come together.",
+		a: "Programs are held at local public schools in Brampton and surrounding areas. These locations provide safe and accessible spaces for youth from different schools to come together.",
 	},
 	{
 		q: "Do participants need to register in advance?",
-		a: "Yes. Registration is required in advance for all programs to ensure proper planning, supervision, and group organization. Registration formats differ by program — some use a monthly membership, others a one-time weekly sign-up — so refer to the program page for how to enroll.",
+		a: "Yes. Registration is required in advance for all programs to ensure proper planning, supervision, and group organization. Registration formats differ by program - some use a monthly membership, others a one-time weekly sign-up - so refer to the program page for how to enroll.",
 	},
 	{
 		q: "What makes your programs different from other sports programs?",
@@ -29,11 +29,11 @@ const faqs = [
 	},
 	{
 		q: "Is transportation provided?",
-		a: "Transportation depends on the program. Some programs offer organized school pickup for designated routes within Scarborough and North York, while others rely on parent drop-off and pickup. Check the program page to see what is available.",
+		a: "Transportation depends on the program. Some programs offer organized school pickup for designated routes within Brampton and surrounding areas, while others rely on parent drop-off and pickup. Check the program page to see what is available.",
 	},
 	{
 		q: "What should participants bring?",
-		a: "Participants should bring comfortable athletic clothing, running shoes, and a water bottle. Some programs also recommend a nut-free snack or lunch and weather-appropriate outerwear — the program page lists a full what-to-bring checklist.",
+		a: "Participants should bring comfortable athletic clothing, running shoes, and a water bottle. Some programs also recommend a nut-free snack or lunch and weather-appropriate outerwear - the program page lists a full what-to-bring checklist.",
 	},
 	{
 		q: "Are these competitive sports programs?",

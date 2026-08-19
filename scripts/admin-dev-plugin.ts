@@ -12,7 +12,7 @@ const adminHtml = fileURLToPath(
  * Vite's dev server rewrites extension-less paths to the app's SPA entry, so a
  * bare `/admin/` request would otherwise render the main site instead of the
  * CMS. Static hosts (GitHub Pages) serve `admin/index.html` for `/admin/`
- * natively, so this only matters in dev — it makes dev match production.
+ * natively, so this only matters in dev - it makes dev match production.
  */
 export const adminDev = (): Plugin => ({
 	name: "ata-admin-dev",

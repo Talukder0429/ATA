@@ -1,11 +1,11 @@
 import { Link } from "@tanstack/react-router";
-import { CheckIcon, HeartHandshakeIcon, ShieldCheckIcon } from "lucide-react";
+import { CheckIcon, ShieldCheckIcon } from "lucide-react";
 import logoUrl from "@/assets/full-logo.svg";
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/button";
 import { site } from "@/data/site";
 
-/** Unsplash photo by Adrià Crehuet Cano (@acrehuet98), free to use under the
+/** Unsplash photo by Adria Crehuet Cano (@acrehuet98), free to use under the
  * Unsplash License. `?` params request a right-sized, optimized crop. */
 const heroImage =
 	"https://images.unsplash.com/photo-1606470542032-a9caa0be6e97";
@@ -21,7 +21,7 @@ const highlights = [
 export function Hero() {
 	return (
 		<section className="relative overflow-hidden bg-linear-to-b from-primary-50/60 to-background">
-			{/* Subtle radial glow — replaces the busy blobs */}
+			{/* Subtle radial glow - replaces the busy blobs */}
 			<div
 				aria-hidden="true"
 				className="pointer-events-none absolute -top-24 right-0 size-128 rounded-full bg-primary-100/50 blur-3xl"
@@ -72,8 +72,8 @@ export function Hero() {
 								className="aspect-4/3 size-full object-cover"
 							/>
 
-							{/* Floating card — top left */}
-							<div className="absolute top-6 left-6 rounded-xl bg-background/95 p-3 shadow-lg backdrop-blur-sm">
+							{/* Floating card - top left */}
+							{/* <div className="absolute top-6 left-6 rounded-xl bg-background/95 p-3 shadow-lg backdrop-blur-sm">
 								<div className="flex items-center gap-3">
 									<div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-accent-100">
 										<HeartHandshakeIcon className="size-5 text-accent-600" />
@@ -87,9 +87,9 @@ export function Hero() {
 										</p>
 									</div>
 								</div>
-							</div>
+							</div> */}
 
-							{/* Floating card — bottom */}
+							{/* Floating card - bottom */}
 							<div className="absolute right-6 bottom-6 left-6 rounded-xl bg-background p-4 shadow-lg">
 								<div className="flex items-center gap-3">
 									<div className="flex size-12 shrink-0 items-center justify-center rounded-full bg-secondary-500">

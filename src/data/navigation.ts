@@ -15,7 +15,7 @@ export interface NavGroup {
 }
 
 /**
- * Primary navigation tree — consumed by the desktop Header dropdowns, the
+ * Primary navigation tree - consumed by the desktop Header dropdowns, the
  * mobile nav sheet, and the Footer. One source of truth for site links.
  */
 export const navGroups: NavGroup[] = [

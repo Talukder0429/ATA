@@ -21,12 +21,12 @@ describe("CardsBlock", () => {
 			<CardsBlock
 				block={{
 					type: "cards",
-					items: [{ title: "Junior Division", text: "Grades 3–5" }],
+					items: [{ title: "Junior Division", text: "Grades 3-5" }],
 				}}
 			/>,
 		);
 		expect(screen.getByText("Junior Division")).toBeInTheDocument();
-		expect(screen.getByText("Grades 3–5")).toBeInTheDocument();
+		expect(screen.getByText("Grades 3-5")).toBeInTheDocument();
 		expect(container.querySelector("svg")).toBeNull();
 	});
 });

@@ -104,8 +104,8 @@ function RouteComponent() {
 						<p>
 							This system helps reduce transportation challenges for parents
 							while ensuring participants arrive safely and on time to program
-							locations held at local public schools in Scarborough and North
-							York.
+							locations held at local public schools in Brampton and surrounding
+							areas.
 						</p>
 					</div>
 				</section>

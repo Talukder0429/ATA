@@ -1,6 +1,6 @@
 import { SiFacebook, SiInstagram, SiX } from "@icons-pack/react-simple-icons";
 import { Link } from "@tanstack/react-router";
-import { MailIcon, MapPinIcon, PhoneIcon } from "lucide-react";
+import { MailIcon, PhoneIcon } from "lucide-react";
 import logoUrl from "@/assets/logo-image.svg";
 import { footerQuickLinks, legalLinks } from "@/data/navigation";
 import { site } from "@/data/site";
@@ -73,14 +73,14 @@ export function Footer() {
 							Contact
 						</h2>
 						<ul className="space-y-2 text-sm">
-							<li className="flex items-start gap-2">
+							{/* <li className="flex items-start gap-2">
 								<MapPinIcon className="mt-0.5 size-5 shrink-0 text-primary-500" />
 								<span>
 									{site.contact.address.line1}
 									<br />
 									{site.contact.address.line2}
 								</span>
-							</li>
+							</li> */}
 							<li className="flex items-center gap-2">
 								<PhoneIcon className="size-5 shrink-0 text-primary-500" />
 								<span>{site.contact.phone}</span>

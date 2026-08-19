@@ -23,7 +23,7 @@ function RouteComponent() {
 					className="h-[calc(100dvh-32rem)] min-h-140 w-full"
 					loading="lazy"
 				>
-					Loading…
+					Loading...
 				</iframe>
 			</div>
 			<p className="mt-4 text-sm text-muted-foreground">

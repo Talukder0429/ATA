@@ -5,8 +5,8 @@ import { navGroups } from "@/data/navigation";
 import { getPage, type PagePath } from "@/data/pages";
 
 interface SectionOverviewProps {
-	/** The section landing path, e.g. "/programs" — its nav group's children
-	 * (minus the "All …" self-link) are rendered as overview cards. */
+	/** The section landing path, e.g. "/programs" - its nav group's children
+	 * (minus the "All ..." self-link) are rendered as overview cards. */
 	section: Extract<PagePath, "/programs" | "/about" | "/resources">;
 }
 
