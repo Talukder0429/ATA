@@ -39,6 +39,22 @@ function RouteComponent() {
 		<Page title={page.title} description={page.description}>
 			<div className="space-y-12">
 				<section>
+					<SectionHeading>Our Story</SectionHeading>
+					<div className="space-y-4 leading-relaxed text-muted-foreground">
+						<p>
+							Founded by recreation professionals with over 15 years of
+							experience working with youth in community recreation, Active
+							Together Activities was created to give every young athlete an
+							opportunity to participate, improve, and belong.
+						</p>
+					</div>
+					<blockquote className="mt-6 border-l-4 border-primary bg-primary-50/60 py-4 pr-4 pl-6 font-heading text-lg font-semibold text-foreground italic">
+						Not every youth makes a competitive team - but every youth deserves
+						a place to play.
+					</blockquote>
+				</section>
+
+				<section>
 					<SectionHeading>Mission &amp; Values</SectionHeading>
 					<div className="space-y-4 leading-relaxed text-muted-foreground">
 						<p>

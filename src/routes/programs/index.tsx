@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Page } from "@/components/layout/Page";
 import { ProgramGrid } from "@/components/programs/ProgramGrid";
+import { WhyChooseUs } from "@/components/programs/WhyChooseUs";
 import { pages } from "@/data/pages";
 import { visiblePrograms } from "@/data/programs";
 import { seo } from "@/lib/seo";
@@ -16,6 +17,7 @@ function RouteComponent() {
 	return (
 		<Page title={page.title} description={page.description}>
 			<ProgramGrid programs={visiblePrograms} />
+			<WhyChooseUs />
 		</Page>
 	);
 }

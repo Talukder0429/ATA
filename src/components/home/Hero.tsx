@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { CheckIcon, ShieldCheckIcon } from "lucide-react";
+import { ShieldCheckIcon } from "lucide-react";
 import logoUrl from "@/assets/full-logo.svg";
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/button";
@@ -10,14 +10,6 @@ import { site } from "@/data/site";
 const heroImage =
 	"https://images.unsplash.com/photo-1606470542032-a9caa0be6e97";
 
-/** Quick trust signals shown beneath the hero CTAs. */
-const highlights = [
-	"Safe & inclusive for all ages",
-	"Qualified, caring staff",
-	"Affordable for every family",
-	"Year-round programs & camps",
-];
-
 export function Hero() {
 	return (
 		<section className="relative overflow-hidden bg-linear-to-b from-primary-50/60 to-background">
@@ -27,7 +19,7 @@ export function Hero() {
 				className="pointer-events-none absolute -top-24 right-0 size-128 rounded-full bg-primary-100/50 blur-3xl"
 			/>
 
-			<Container className="relative py-20 lg:py-32">
+			<Container className="relative py-4 lg:py-8">
 				<div className="grid items-center gap-12 lg:grid-cols-2">
 					{/* Content */}
 					<div className="text-center lg:text-left">
@@ -39,18 +31,12 @@ export function Hero() {
 							/>
 						</div>
 
-						<h1 className="my-6 flex flex-wrap justify-center gap-x-3 font-heading text-3xl font-bold leading-[1.1] text-foreground sm:text-4xl lg:text-5xl">
-							<span>Play.</span>
-							<span>Learn.</span>
+						<h1 className="my-6 font-heading text-3xl font-bold leading-[1.1] text-foreground sm:text-4xl lg:text-5xl">
+							Multi-Sport Programs Designed for Youth Who Want to{" "}
 							<span className="bg-linear-to-r from-primary-600 to-accent-600 bg-clip-text pb-2 text-transparent">
-								Belong.
+								Play, Improve, and Connect
 							</span>
 						</h1>
-
-						<p className="mx-auto mb-8 max-w-4xl text-lg text-muted-foreground sm:text-xl lg:mx-0">
-							Engaging programs that bring children, youth, and families
-							together through fitness, learning, and community connection.
-						</p>
 
 						<div className="flex flex-col justify-center gap-4 sm:flex-row">
 							<Button asChild size="lg">
@@ -107,20 +93,13 @@ export function Hero() {
 							</div>
 						</div>
 
-						{/* Trust highlights */}
-						<ul className="mt-10 grid grid-cols-1 gap-3 border-t border-border pt-8 sm:grid-cols-2">
-							{highlights.map((highlight) => (
-								<li
-									key={highlight}
-									className="flex items-center justify-center gap-2 text-sm font-medium text-muted-foreground lg:justify-start"
-								>
-									<span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-secondary-100">
-										<CheckIcon className="size-3 text-secondary-600" />
-									</span>
-									{highlight}
-								</li>
-							))}
-						</ul>
+						{/* Explanatory blurb */}
+						<p className="mt-10 border-t border-border pt-8 text-sm leading-relaxed text-muted-foreground">
+							Active Together Activities provides structured multi-sport
+							programming for school-aged youth. We create a welcoming
+							environment where youth of all skill levels can build confidence,
+							stay active, and make new friends through sports.
+						</p>
 					</div>
 				</div>
 			</Container>
