@@ -9,13 +9,19 @@ heroImage: https://images.unsplash.com/photo-1776243773206-a29b683c97fb
 registrationLabel: ''
 quickFacts:
   - label: Schedule
-    value: Mon, March 15th - Fri, March 19th | 9:00 AM - 5:00 PM
+    lines:
+      - text: Mon, March 15th - Fri, March 19th
+      - text: 9:00 AM - 5:00 PM
   - label: Ages
-    value: Grades 3-12 | All skill levels welcome
+    lines:
+      - text: Grades 3-12
+      - text: All skill levels welcome
   - label: Registration
-    value: One-time weekly registration
+    lines:
+      - text: One-time weekly registration
   - label: Pricing
-    value: TBD
+    lines:
+      - text: TBD
 sections:
   - type: prose
     heading: Program Overview

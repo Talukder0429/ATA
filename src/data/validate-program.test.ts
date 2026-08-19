@@ -52,12 +52,12 @@ describe("validateProgram", () => {
 		const p = validateProgram(
 			{
 				...valid,
-				quickFacts: [{ label: "Ages", value: "3-12" }],
+				quickFacts: [{ label: "Ages", lines: [{ text: "3-12" }] }],
 				closing: { heading: "Join", text: "Sign up today" },
 			},
 			"game-time",
 		);
-		expect(p.quickFacts?.[0].value).toBe("3-12");
+		expect(p.quickFacts?.[0].lines[0].text).toBe("3-12");
 		expect(p.closing?.heading).toBe("Join");
 	});
 
@@ -67,7 +67,7 @@ describe("validateProgram", () => {
 		).toThrow(/quickFacts/);
 	});
 
-	it("throws when a quickFacts entry is missing value", () => {
+	it("throws when a quickFacts entry is missing lines", () => {
 		const bad = { ...valid, quickFacts: [{ label: "Ages" }] };
 		expect(() => validateProgram(bad, "game-time")).toThrow(/quickFacts/);
 	});

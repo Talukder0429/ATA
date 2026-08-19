@@ -1,4 +1,5 @@
 import type { Program } from "@/data/program-types";
+import { cn } from "@/lib/utils";
 
 export const FactsRail = ({ program }: { program: Program }) => {
 	if (!program.quickFacts?.length) return null;
@@ -13,8 +14,19 @@ export const FactsRail = ({ program }: { program: Program }) => {
 						<dt className="font-heading text-xs font-bold uppercase tracking-wide text-primary">
 							{fact.label}
 						</dt>
-						<dd className="mt-1 font-heading font-semibold text-foreground">
-							{fact.value}
+						<dd className="mt-1 space-y-0.5 font-heading font-semibold text-foreground">
+							{fact.lines.map((line) => (
+								<span
+									key={line.text}
+									aria-disabled={line.unavailable || undefined}
+									className={cn(
+										"block",
+										line.unavailable && "text-muted-foreground line-through",
+									)}
+								>
+									{line.text}
+								</span>
+							))}
 						</dd>
 					</div>
 				))}

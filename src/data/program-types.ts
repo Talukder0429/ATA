@@ -1,8 +1,13 @@
 export type ProgramStatus = "published" | "hidden" | "draft";
 
+export interface QuickFactLine {
+	text: string;
+	unavailable?: boolean;
+}
+
 export interface QuickFact {
 	label: string;
-	value: string;
+	lines: QuickFactLine[];
 }
 
 export interface PricingItem {
@@ -10,6 +15,7 @@ export interface PricingItem {
 	price: string;
 	note?: string;
 	includes?: string[];
+	unavailable?: boolean;
 }
 
 export interface CardItem {

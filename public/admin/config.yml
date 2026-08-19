@@ -96,10 +96,23 @@ collections:
         label_singular: Fact
         widget: list
         required: false
-        summary: '{{fields.label}}: {{fields.value}}'
+        summary: '{{fields.label}}'
         fields:
           - { name: label, label: Label, widget: string }
-          - { name: value, label: Value, widget: string }
+          - name: lines
+            label: Lines
+            label_singular: Line
+            widget: list
+            summary: '{{fields.text}}'
+            fields:
+              - { name: text, label: Text, widget: string }
+              - {
+                  name: unavailable,
+                  label: Currently unavailable,
+                  widget: boolean,
+                  required: false,
+                  default: false,
+                }
 
       - name: sections
         label: Content sections
@@ -199,6 +212,13 @@ collections:
                     widget: list
                     required: false
                     field: { name: item, label: Item, widget: string }
+                  - {
+                      name: unavailable,
+                      label: Currently unavailable,
+                      widget: boolean,
+                      required: false,
+                      default: false,
+                    }
 
       - name: closing
         label: Closing call-to-action

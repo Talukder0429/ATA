@@ -8,13 +8,20 @@ heroImage: https://images.unsplash.com/photo-1604651683969-48adb1d8a570
 registrationLabel: ''
 quickFacts:
   - label: Schedule
-    value: Saturday & Sunday, 12:00 PM - 6:00 PM
+    lines:
+      - text: Saturday & Sunday
+      - text: 12:00 PM - 6:00 PM
   - label: Ages
-    value: Grades 3-8 | All skill levels welcome
+    lines:
+      - text: Grades 3-8
+      - text: All skill levels welcome
   - label: Registration
-    value: Monthly membership & single day registration available
+    lines:
+      - text: Monthly membership & single day registration available
   - label: Pricing
-    value: $350/month membership | $50/day single registration
+    lines:
+      - text: $350/month membership
+      - text: $50/day single registration
 sections:
   - type: prose
     heading: Program Overview

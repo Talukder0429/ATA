@@ -38,4 +38,23 @@ describe("PricingBlock", () => {
 		expect(screen.getByText("Multi-sport activities")).toBeInTheDocument();
 		expect(screen.getByText("Equipment provided")).toBeInTheDocument();
 	});
+
+	it("flags an unavailable tier with a badge and struck-through price", () => {
+		render(
+			<PricingBlock
+				block={{
+					type: "pricing",
+					items: [
+						{
+							label: "Program + school pickup",
+							price: "$400",
+							unavailable: true,
+						},
+					],
+				}}
+			/>,
+		);
+		expect(screen.getByText("Currently full")).toBeInTheDocument();
+		expect(screen.getByText("$400")).toHaveClass("line-through");
+	});
 });

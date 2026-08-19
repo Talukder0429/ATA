@@ -9,13 +9,23 @@ heroImage: https://images.unsplash.com/photo-1761039808159-f02b58f07032
 registrationLabel: ''
 quickFacts:
   - label: Schedule
-    value: Mon-Fri, 6:00 PM - 8:00 PM (September - June)
+    lines:
+      - text: Mon-Fri
+      - text: 6:00 PM - 8:00 PM (September - June)
   - label: Ages
-    value: Grades 3-8 | All skill levels welcome
+    lines:
+      - text: Grades 3-8
+      - text: All skill levels welcome
   - label: Transportation
-    value: School pickup available | Parent pickup at 8 PM
+    lines:
+      - text: School pickup
+        unavailable: true
+      - text: Parent pickup at 8 PM
   - label: Pricing
-    value: $400 with pickup | $200 without pickup
+    lines:
+      - text: $400 with school pickup
+        unavailable: true
+      - text: $150 with parent pickup
 sections:
   - type: prose
     heading: Program Overview
@@ -34,6 +44,7 @@ sections:
       - label: Program + school pickup
         price: $400/month
         note: Daily transportation included
+        unavailable: true
       - label: Program only
         price: $50/week or $150/month
         note: Parent drop-off and pickup

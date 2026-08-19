@@ -81,6 +81,14 @@ const validateBlock = (
 						slug,
 						`pricing section ${i} item "includes" must be a list of strings`,
 					);
+				} else if (
+					item.unavailable !== undefined &&
+					typeof item.unavailable !== "boolean"
+				) {
+					fail(
+						slug,
+						`pricing section ${i} item "unavailable" must be a boolean`,
+					);
 				}
 			}
 			break;
@@ -110,9 +118,20 @@ export const validateProgram = (data: unknown, slug: string): Program => {
 			if (
 				!isObject(fact) ||
 				typeof fact.label !== "string" ||
-				typeof fact.value !== "string"
+				!Array.isArray(fact.lines)
 			) {
-				fail(slug, `each "quickFacts" entry needs string "label" and "value"`);
+				fail(slug, `each "quickFacts" entry needs string "label" and "lines"`);
+			} else {
+				for (const line of fact.lines as unknown[]) {
+					if (!isObject(line) || typeof line.text !== "string") {
+						fail(slug, `each "quickFacts" line needs a string "text"`);
+					} else if (
+						line.unavailable !== undefined &&
+						typeof line.unavailable !== "boolean"
+					) {
+						fail(slug, `"quickFacts" line "unavailable" must be a boolean`);
+					}
+				}
 			}
 		}
 	}
