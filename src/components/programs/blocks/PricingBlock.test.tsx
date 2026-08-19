@@ -3,7 +3,7 @@ import { describe, expect, it } from "vitest";
 import { PricingBlock } from "@/components/programs/blocks/PricingBlock";
 
 describe("PricingBlock", () => {
-	it("marks only the first item as most popular", () => {
+	it("renders each tier's label and price without a badge", () => {
 		render(
 			<PricingBlock
 				block={{
@@ -15,9 +15,27 @@ describe("PricingBlock", () => {
 				}}
 			/>,
 		);
-		const badges = screen.getAllByText("Most popular");
-		expect(badges).toHaveLength(1);
+		expect(screen.queryByText("Most popular")).toBeNull();
 		expect(screen.getByText("With pickup")).toBeInTheDocument();
 		expect(screen.getByText("$200")).toBeInTheDocument();
+	});
+
+	it("lists per-tier includes when provided", () => {
+		render(
+			<PricingBlock
+				block={{
+					type: "pricing",
+					items: [
+						{
+							label: "Monthly Membership",
+							price: "$350/month",
+							includes: ["Multi-sport activities", "Equipment provided"],
+						},
+					],
+				}}
+			/>,
+		);
+		expect(screen.getByText("Multi-sport activities")).toBeInTheDocument();
+		expect(screen.getByText("Equipment provided")).toBeInTheDocument();
 	});
 });

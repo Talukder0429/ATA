@@ -9,6 +9,7 @@ export interface PricingItem {
 	label: string;
 	price: string;
 	note?: string;
+	includes?: string[];
 }
 
 export interface CardItem {

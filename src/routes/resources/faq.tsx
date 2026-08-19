@@ -13,7 +13,7 @@ const faqs = [
 	},
 	{
 		q: "What kind of activities do you offer?",
-		a: "Across our programs we offer a variety of sports and recreational activities, including soccer, basketball, volleyball, badminton, cricket, dodgeball, flag football, fitness challenges, and team-building games. The focus is on participation, teamwork, and staying active in a structured environment.",
+		a: "Across our programs we offer a variety of sports and recreational activities, including soccer, basketball, volleyball, badminton, dodgeball, flag football, fitness challenges, and team-building games. The focus is on participation, teamwork, and staying active in a structured environment.",
 	},
 	{
 		q: "Where do the programs take place?",

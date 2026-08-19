@@ -50,7 +50,7 @@ sections:
       - Achievement recognition
   - type: prose
     heading: Sports and Activities
-    body: Every week, participants experience a mix of team sports, skill development, fitness activities, and recreational games designed to keep them active and engaged. Sports include soccer, basketball, volleyball, badminton, cricket, dodgeball, flag football, fitness challenges, and team-building activities. Throughout the year, participants also enjoy tournaments, themed events, and special activity days.
+    body: Every week, participants experience a mix of team sports, skill development, fitness activities, and recreational games designed to keep them active and engaged. Sports include soccer, basketball, volleyball, badminton, dodgeball, flag football, fitness challenges, and team-building activities. Throughout the year, participants also enjoy tournaments, themed events, and special activity days.
   - type: table
     heading: Weekly Program Schedule
     note: This is just a sample schedule.
@@ -74,7 +74,7 @@ sections:
       - cells:
           - Thursday
           - Multi-Sport Adventure
-          - Volleyball, Badminton, Cricket, Dodgeball, Flag Football
+          - Volleyball, Badminton, Dodgeball, Flag Football
       - cells:
           - Friday
           - Fun Friday

@@ -73,6 +73,14 @@ const validateBlock = (
 						slug,
 						`pricing section ${i} items each need string "label" and "price"`,
 					);
+				} else if (
+					item.includes !== undefined &&
+					!isStringArray(item.includes)
+				) {
+					fail(
+						slug,
+						`pricing section ${i} item "includes" must be a list of strings`,
+					);
 				}
 			}
 			break;

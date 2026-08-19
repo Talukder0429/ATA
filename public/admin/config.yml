@@ -194,6 +194,11 @@ collections:
                   - { name: label, label: Label, widget: string }
                   - { name: price, label: Price, widget: string }
                   - { name: note, label: Note, widget: string, required: false }
+                  - name: includes
+                    label: Includes
+                    widget: list
+                    required: false
+                    field: { name: item, label: Item, widget: string }
 
       - name: closing
         label: Closing call-to-action
