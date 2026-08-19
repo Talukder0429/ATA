@@ -1,4 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import type { ReactNode } from "react";
 import { Page } from "@/components/layout/Page";
 import { pages } from "@/data/pages";
 import { site } from "@/data/site";
@@ -6,7 +7,17 @@ import { seo } from "@/lib/seo";
 
 const page = pages["/resources/faq"];
 
-const faqs = [
+const locationsLink = (label: string) => (
+	<Link
+		to="/contact"
+		hash="locations"
+		className="font-medium text-primary hover:underline"
+	>
+		{label}
+	</Link>
+);
+
+const faqs: { q: string; a: ReactNode }[] = [
 	{
 		q: "What age group are the programs for?",
 		a: "Our programs are designed for school-aged youth, generally spanning Grades 3-13. Exact age and grade divisions vary by program, so check the individual program page for the details that apply.",
@@ -17,7 +28,16 @@ const faqs = [
 	},
 	{
 		q: "Where do the programs take place?",
-		a: "Programs are held at local public schools in Brampton and surrounding areas. These locations provide safe and accessible spaces for youth from different schools to come together.",
+		a: (
+			<>
+				Programs are held at{" "}
+				{locationsLink(
+					"local public schools in Brampton and surrounding areas",
+				)}
+				. These locations provide safe and accessible spaces for youth from
+				different schools to come together.
+			</>
+		),
 	},
 	{
 		q: "Do participants need to register in advance?",
@@ -29,7 +49,14 @@ const faqs = [
 	},
 	{
 		q: "Is transportation provided?",
-		a: "Transportation depends on the program. Some programs offer organized school pickup for designated routes within Brampton and surrounding areas, while others rely on parent drop-off and pickup. Check the program page to see what is available.",
+		a: (
+			<>
+				Transportation depends on the program. Some programs offer{" "}
+				{locationsLink("organized school pickup")} for designated routes within
+				Brampton and surrounding areas, while others rely on parent drop-off and
+				pickup. Check the program page to see what is available.
+			</>
+		),
 	},
 	{
 		q: "What should participants bring?",

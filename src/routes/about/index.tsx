@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Page } from "@/components/layout/Page";
 import { SectionHeading } from "@/components/programs/SectionHeading";
 import { pages } from "@/data/pages";
@@ -112,10 +112,17 @@ function RouteComponent() {
 					<div className="space-y-4 leading-relaxed text-muted-foreground">
 						<p>
 							To make participation easier for families, Active Together
-							Activities Inc. provides organized school pickup from
-							participating schools at the end of the school day. This allows
-							youth to transition directly from school into the program in a
-							safe and structured way.
+							Activities Inc. provides organized school pickup from{" "}
+							<Link
+								to="/contact"
+								hash="locations"
+								className="font-medium text-primary hover:underline"
+							>
+								participating schools
+							</Link>{" "}
+							at the end of the school day. This allows youth to transition
+							directly from school into the program in a safe and structured
+							way.
 						</p>
 						<p>
 							This system helps reduce transportation challenges for parents

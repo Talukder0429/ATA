@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { MailIcon, PhoneIcon } from "lucide-react";
+import { SchoolLocations } from "@/components/contact/SchoolLocations";
 import { Page } from "@/components/layout/Page";
+import { SectionHeading } from "@/components/programs/SectionHeading";
 import { pages } from "@/data/pages";
 import { site } from "@/data/site";
 import { seo } from "@/lib/seo";
@@ -66,18 +68,16 @@ function RouteComponent() {
 						</span>
 					</a> */}
 				</div>
-
-				{/* <div className="overflow-hidden rounded-xl border shadow-sm">
-					<iframe
-						title={`Map showing ${site.name} at ${site.contact.address.line1}`}
-						src={mapEmbedSrc}
-						className="h-72 w-full md:h-full"
-						loading="lazy"
-						referrerPolicy="no-referrer-when-downgrade"
-						allowFullScreen
-					/>
-				</div> */}
 			</div>
+
+			<section id="locations" className="mt-12 scroll-mt-24">
+				<SectionHeading>Program Locations</SectionHeading>
+				<p className="mb-6 text-muted-foreground">
+					We run programs at schools across Brampton and Mississauga. Select a
+					school to see it on the map.
+				</p>
+				<SchoolLocations />
+			</section>
 		</Page>
 	);
 }

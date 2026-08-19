@@ -39,7 +39,6 @@ sections:
         text: Grades 6-8
   - type: pricing
     heading: Transportation & Pricing
-    note: Which schools offer pickup is still to be decided.
     items:
       - label: Program + school pickup
         price: $400/month
