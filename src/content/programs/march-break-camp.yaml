@@ -11,17 +11,23 @@ quickFacts:
   - label: Schedule
     lines:
       - text: Mon, March 15th - Fri, March 19th
+        unavailable: false
       - text: 9:00 AM - 5:00 PM
+        unavailable: false
   - label: Ages
     lines:
       - text: Grades 3-12
+        unavailable: false
       - text: All skill levels welcome
+        unavailable: false
   - label: Registration
     lines:
       - text: One-time weekly registration
+        unavailable: false
   - label: Pricing
     lines:
-      - text: TBD
+      - text: $100/Month
+        unavailable: false
 sections:
   - type: prose
     heading: Program Overview
