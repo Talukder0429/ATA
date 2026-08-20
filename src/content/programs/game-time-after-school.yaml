@@ -25,7 +25,7 @@ quickFacts:
     lines:
       - text: $400 with school pickup
         unavailable: true
-      - text: $150 with parent pickup
+      - text: $50/wk or $150/mo with parent pickup
 sections:
   - type: prose
     heading: Program Overview
@@ -53,7 +53,6 @@ sections:
       - Professional sports instruction
       - Sports equipment
       - Daily supervised activities
-      - Homework support
       - Leadership and teamwork activities
       - Friendly competitions
       - Monthly themed events
@@ -96,7 +95,6 @@ sections:
       - Comfortable running shoes
       - Water bottle
       - Nut-free snack (if desired)
-      - Homework or reading materials (optional)
       - Weather-appropriate outerwear for outdoor activities
   - type: prose
     heading: Safety

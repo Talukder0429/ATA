@@ -20,7 +20,7 @@ const locationsLink = (label: string) => (
 const faqs: { q: string; a: ReactNode }[] = [
 	{
 		q: "What age group are the programs for?",
-		a: "Our programs are designed for school-aged youth, generally spanning Grades 3-13. Exact age and grade divisions vary by program, so check the individual program page for the details that apply.",
+		a: "Our programs are designed for school-aged youth, generally spanning Grades 3-8. Exact age and grade divisions vary by program, so check the individual program page for the details that apply.",
 	},
 	{
 		q: "What kind of activities do you offer?",

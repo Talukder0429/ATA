@@ -10,7 +10,7 @@ quickFacts:
   - label: Schedule
     lines:
       - text: Saturday & Sunday
-      - text: 12:00 PM - 6:00 PM
+      - text: 11:00 AM - 5:00 PM
   - label: Ages
     lines:
       - text: Grades 3-8
@@ -40,7 +40,7 @@ sections:
         price: $350/month per athlete
         includes:
           - Saturday & Sunday sports programming
-          - 12:00 PM - 6:00 PM sessions
+          - 11:00 AM - 5:00 PM sessions
           - Multi-sport activities
           - Professional sports instruction
           - Skill development sessions
