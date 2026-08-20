@@ -38,6 +38,8 @@ export function Footer() {
 									<a
 										key={social.label}
 										href={social.href}
+										target="_blank"
+										rel="noopener noreferrer"
 										className="text-neutral-400 transition-colors hover:text-white"
 										aria-label={social.label}
 									>
@@ -81,13 +83,23 @@ export function Footer() {
 									{site.contact.address.line2}
 								</span>
 							</li> */}
-							<li className="flex items-center gap-2">
-								<PhoneIcon className="size-5 shrink-0 text-primary-500" />
-								<span>{site.contact.phone}</span>
+							<li>
+								<a
+									href={`tel:${site.contact.phone.replace(/[^\d+]/g, "")}`}
+									className="flex items-center gap-2 transition-colors hover:text-white"
+								>
+									<PhoneIcon className="size-5 shrink-0 text-primary-500" />
+									<span>{site.contact.phone}</span>
+								</a>
 							</li>
-							<li className="flex items-center gap-2">
-								<MailIcon className="size-5 shrink-0 text-primary-500" />
-								<span>{site.contact.email}</span>
+							<li>
+								<a
+									href={`mailto:${site.contact.email}`}
+									className="flex items-center gap-2 transition-colors hover:text-white"
+								>
+									<MailIcon className="size-5 shrink-0 text-primary-500" />
+									<span>{site.contact.email}</span>
+								</a>
 							</li>
 						</ul>
 					</div>

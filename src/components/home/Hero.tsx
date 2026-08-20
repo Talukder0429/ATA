@@ -19,8 +19,8 @@ export function Hero() {
 				className="pointer-events-none absolute -top-24 right-0 size-128 rounded-full bg-primary-100/50 blur-3xl"
 			/>
 
-			<Container className="relative py-4 lg:py-8">
-				<div className="grid items-center gap-12 lg:grid-cols-2">
+			<Container className="relative py-8 lg:py-16">
+				<div className="grid items-start gap-12 lg:grid-cols-2">
 					{/* Content */}
 					<div className="text-center lg:text-left">
 						<div className="flex justify-center lg:justify-start">
@@ -31,7 +31,7 @@ export function Hero() {
 							/>
 						</div>
 
-						<h1 className="my-6 font-heading text-3xl font-bold leading-[1.1] text-foreground sm:text-4xl lg:text-5xl">
+						<h1 className="my-6 font-heading text-2xl font-bold leading-[1.1] text-foreground sm:text-3xl lg:text-4xl">
 							Multi-Sport Programs Designed for Youth Who Want to{" "}
 							<span className="bg-linear-to-r from-primary-600 to-accent-600 bg-clip-text pb-2 text-transparent">
 								Play, Improve, and Connect
@@ -94,7 +94,7 @@ export function Hero() {
 						</div>
 
 						{/* Explanatory blurb */}
-						<p className="mt-10 border-t border-border pt-8 text-sm leading-relaxed text-muted-foreground">
+						<p className="mt-8 border-t border-border pt-6 text-sm leading-relaxed text-muted-foreground">
 							Active Together Activities provides structured multi-sport
 							programming for school-aged youth. We create a welcoming
 							environment where youth of all skill levels can build confidence,

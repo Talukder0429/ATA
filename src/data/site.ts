@@ -18,9 +18,13 @@ export const site = {
 		},
 	},
 	socials: [
-		{ label: "Facebook", href: "https://facebook.com", icon: "facebook" },
-		{ label: "Instagram", href: "https://instagram.com", icon: "instagram" },
-		{ label: "Twitter", href: "https://twitter.com", icon: "x" },
+		// { label: "Facebook", href: "https://facebook.com", icon: "facebook" },
+		{
+			label: "Instagram",
+			href: "https://instagram.com/activetogetheractivities",
+			icon: "instagram",
+		},
+		// { label: "Twitter", href: "https://twitter.com", icon: "x" },
 	],
 } as const;
 
