@@ -11,6 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
+.firebase
 
 # Superpowers scratch (brainstorm mockups, plan/exec ledgers)
 .superpowers/

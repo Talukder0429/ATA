@@ -62,7 +62,7 @@ export function Hero() {
 							{/* <div className="absolute top-6 left-6 rounded-xl bg-background/95 p-3 shadow-lg backdrop-blur-sm">
 								<div className="flex items-center gap-3">
 									<div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-accent-100">
-										<HeartHandshakeIcon className="size-5 text-accent-600" />
+										<HeartHandshakeIcon className="size-5 text-accent-700" />
 									</div>
 									<div>
 										<p className="text-sm font-semibold text-foreground">

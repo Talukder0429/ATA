@@ -11,43 +11,44 @@
  * brand styling.
  * ------------------------------------------------------------------------- */
 @theme {
-	/* Primary - orange (the logo's bright #ff751f). Drives CTAs, links, focus.
+	/* Primary - bright blue (#1e90ff at 500). Drives CTAs, links, focus.
 	 * Note: white text needs primary-700 to pass AA; 500/600 are non-text only. */
-	--color-primary-50: #fff4ec;
-	--color-primary-100: #ffe4d3;
-	--color-primary-200: #ffc9a8;
-	--color-primary-300: #ffa771;
-	--color-primary-400: #ff8a44;
-	--color-primary-500: #ff751f;
-	--color-primary-600: #e85d0c;
-	--color-primary-700: #c24a08;
-	--color-primary-800: #9a3c0e;
-	--color-primary-900: #7c3210;
+	--color-primary-50: #f7faff;
+	--color-primary-100: #e3effe;
+	--color-primary-200: #c9e1ff;
+	--color-primary-300: #a1ccfe;
+	--color-primary-400: #64acff;
+	--color-primary-500: #1e90ff;
+	--color-primary-600: #0177dc;
+	--color-primary-700: #0166bd;
+	--color-primary-800: #00539c;
+	--color-primary-900: #0b4781;
 
-	/* Secondary - warm slate. Grounding color for the CTA band, dark surfaces,
-	 * and table headers (never a primary-CTA button fill). */
-	--color-secondary-50: #f4f5f7;
-	--color-secondary-100: #e5e7ec;
-	--color-secondary-200: #cbd0d9;
-	--color-secondary-300: #a6afbe;
-	--color-secondary-400: #78849a;
-	--color-secondary-500: #566275;
-	--color-secondary-600: #3c4657;
-	--color-secondary-700: #333c4b;
-	--color-secondary-800: #2c3442;
-	--color-secondary-900: #262d38;
+	/* Secondary - navy (#0b2d5b at 800). Grounding color for the CTA band, dark
+	 * surfaces, and table headers (never a primary-CTA button fill). */
+	--color-secondary-50: #e8eff8;
+	--color-secondary-100: #d3e1f4;
+	--color-secondary-200: #b5cdef;
+	--color-secondary-300: #8db2e6;
+	--color-secondary-400: #608dce;
+	--color-secondary-500: #3e6fb5;
+	--color-secondary-600: #245498;
+	--color-secondary-700: #17417b;
+	--color-secondary-800: #0b2d5b;
+	--color-secondary-900: #0d2649;
 
-	/* Accent - gold (the logo's #ffbd59). Highlights, kickers, badges. */
-	--color-accent-50: #fffaf0;
-	--color-accent-100: #fff1d6;
-	--color-accent-200: #ffe0a8;
-	--color-accent-300: #ffcd76;
-	--color-accent-400: #ffbd59;
-	--color-accent-500: #f0a336;
-	--color-accent-600: #d4841c;
-	--color-accent-700: #ac6715;
-	--color-accent-800: #855012;
-	--color-accent-900: #6e4212;
+	/* Accent - lime (#a3e635 at 400). Highlights, kickers, badges.
+	 * Note: text on light backgrounds needs accent-700 to pass AA. */
+	--color-accent-50: #f7fee7;
+	--color-accent-100: #ecfccb;
+	--color-accent-200: #d9f99d;
+	--color-accent-300: #bef264;
+	--color-accent-400: #a3e635;
+	--color-accent-500: #84cc16;
+	--color-accent-600: #65a30d;
+	--color-accent-700: #4d7c0f;
+	--color-accent-800: #3f6212;
+	--color-accent-900: #365314;
 
 	/* Brand red - the logo's red. Sparing accent; not wired to a shadcn token. */
 	--color-brand-red-500: #d63333;
@@ -60,8 +61,8 @@
 
 /* ---------------------------------------------------------------------------
  * shadcn/ui semantic tokens. These map onto the brand scales above so the
- * component layer stays on-brand: `--primary` = orange (primary-700, AA for
- * white text), `--secondary` = warm slate (grounding, not a CTA fill). Edit
+ * component layer stays on-brand: `--primary` = blue (primary-700, AA for
+ * white text), `--secondary` = navy (grounding, not a CTA fill). Edit
  * these to retheme the component layer.
  * ------------------------------------------------------------------------- */
 :root {
@@ -75,23 +76,23 @@
 	--popover: #ffffff;
 	--popover-foreground: #1f2937;
 
-	--primary: #c24a08; /* primary-700, orange CTA - AA for white button text */
+	--primary: #0166bd; /* primary-700, blue CTA - AA for white button text */
 	--primary-foreground: #ffffff;
 
-	--secondary: #3c4657; /* secondary-600, warm slate */
+	--secondary: #0b2d5b; /* secondary-800, navy */
 	--secondary-foreground: #ffffff;
 
 	--muted: #f5f5f4;
 	--muted-foreground: #78716c;
 
-	--accent: #fff1d6; /* accent-100, soft gold tint for hover surfaces */
-	--accent-foreground: #2c3442; /* secondary-800, slate */
+	--accent: #ecfccb; /* accent-100, soft lime tint for hover surfaces */
+	--accent-foreground: #0b2d5b; /* secondary-800, navy */
 
 	--destructive: #dc2626;
 
 	--border: #e7e5e4;
 	--input: #e7e5e4;
-	--ring: #c24a08;
+	--ring: #0166bd;
 }
 
 .dark {
@@ -103,23 +104,23 @@
 	--popover: #292524;
 	--popover-foreground: #fafaf9;
 
-	--primary: #ff8a44; /* primary-400, lighter orange for dark bg */
+	--primary: #64acff; /* primary-400, lighter blue for dark bg */
 	--primary-foreground: #1c1917;
 
-	--secondary: #566275; /* secondary-500, slate */
+	--secondary: #3e6fb5; /* secondary-500, blue-navy */
 	--secondary-foreground: #ffffff;
 
 	--muted: #292524;
 	--muted-foreground: #a8a29e;
 
-	--accent: #2c3442; /* secondary-800, slate hover surface */
+	--accent: #0b2d5b; /* secondary-800, navy hover surface */
 	--accent-foreground: #fafaf9;
 
 	--destructive: #ff6467;
 
 	--border: #ffffff1a;
 	--input: #ffffff26;
-	--ring: #ff8a44;
+	--ring: #64acff;
 }
 
 @theme inline {

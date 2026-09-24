@@ -11,7 +11,7 @@ const benefits = [
 
 export function CTA() {
 	return (
-		<Section className="bg-linear-to-br from-secondary-600 to-secondary-700">
+		<Section className="bg-linear-to-br from-secondary-700 to-secondary-800">
 			<div className="relative overflow-hidden rounded-3xl p-8 text-white sm:p-12">
 				<div className="relative grid items-center gap-8 lg:grid-cols-2">
 					<div>

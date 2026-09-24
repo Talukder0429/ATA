@@ -51,7 +51,7 @@ export const ProgramView = ({ program }: { program: Program }) => {
 				<div className="bg-[radial-gradient(ellipse_at_top_left,var(--color-accent-100),var(--color-background)_62%)]">
 					<div className="mx-auto max-w-5xl px-6 py-14 sm:px-8">
 						{program.subtitle ? (
-							<p className="mb-3 font-heading text-xs font-bold uppercase tracking-[0.14em] text-accent-600">
+							<p className="mb-3 font-heading text-xs font-bold uppercase tracking-[0.14em] text-accent-700">
 								{program.subtitle}
 							</p>
 						) : null}

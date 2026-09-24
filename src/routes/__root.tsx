@@ -6,6 +6,7 @@ import {
 } from "@tanstack/react-router";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { LeadModal } from "@/components/LeadModal";
 import { Button } from "@/components/ui/button";
 import { seo } from "@/lib/seo";
 
@@ -30,6 +31,7 @@ function Shell({ children }: { children: React.ReactNode }) {
 				{children}
 			</main>
 			<Footer />
+			<LeadModal />
 		</div>
 	);
 }
