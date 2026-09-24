@@ -1,25 +1,26 @@
-name: Deploy to GitHub Pages
+name: Deploy to Firebase Hosting
 
 on:
   push:
     branches: [master]
   workflow_dispatch:
 
-# Allow the workflow to deploy to Pages and open a failure issue.
+# Read the repo and open a failure issue.
 permissions:
   contents: read
-  pages: write
-  id-token: write
   issues: write
 
 # Only one concurrent deployment; don't cancel an in-progress run.
 concurrency:
-  group: pages
+  group: firebase-hosting
   cancel-in-progress: false
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://activetogetheractivities.org
     steps:
       - uses: actions/checkout@v6
 
@@ -35,31 +36,19 @@ jobs:
 
       - run: pnpm build
 
-      # SPA fallback: GitHub Pages serves 404.html for unknown paths, so deep
-      # links (e.g. /ATA/some/route) reach the client router instead of 404ing.
-      - run: cp dist/index.html dist/404.html
-
-      - uses: actions/configure-pages@v6
-
-      - uses: actions/upload-pages-artifact@v5
+      # Deploys dist/ to the live channel (per firebase.json), which serves the
+      # custom domain connected in the Firebase console.
+      - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          path: dist
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v5
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_ACTIVE_TOGETHER_ACTIVITIES }}
+          projectId: active-together-activities
+          channelId: live
 
   # If the build or deploy fails, open (or comment on) a GitHub issue. Watching
   # the repo for Issues then emails the owner regardless of who pushed - the
   # built-in Actions email only reaches the person who triggered the run.
   notify-failure:
-    needs: [build, deploy]
+    needs: [deploy]
     if: failure()
     runs-on: ubuntu-latest
     steps:
@@ -69,7 +58,7 @@ jobs:
             const title = "Site build/deploy is failing";
             const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
             const body = [
-              `The **Deploy to GitHub Pages** workflow failed, so the site did not update.`,
+              `The **Deploy to Firebase Hosting** workflow failed, so the site did not update.`,
               ``,
               `- Commit: ${context.sha}`,
               `- Triggered by: @${context.actor}`,
@@ -104,7 +93,7 @@ jobs:
 
   # On a successful deploy, close any open failure issue so it doesn't linger.
   notify-recovery:
-    needs: [build, deploy]
+    needs: [deploy]
     if: success()
     runs-on: ubuntu-latest
     steps:

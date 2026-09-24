@@ -3,7 +3,7 @@
 #
 # This maps the program YAML schema (see src/data/program-types.ts) to a
 # form-based editor. Saving commits the edited file to `branch` on GitHub,
-# which triggers the Pages deploy workflow (~1-2 min until live).
+# which triggers the Firebase Hosting deploy workflow (~1-2 min until live).
 
 backend:
   name: github
@@ -18,7 +18,7 @@ backend:
 # Uploaded media lands here. Program images are currently external URLs, so
 # this is only used if an editor uploads a file instead of pasting a URL.
 media_folder: public/uploads
-public_folder: /ATA/uploads
+public_folder: /uploads
 
 # Show a diff-style preview of pending changes before publishing.
 publish_mode: simple

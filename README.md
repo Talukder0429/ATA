@@ -1,7 +1,8 @@
 # Active Together Activities
 
 Marketing and program site for Active Together Activities. Built with Vite +
-React + TanStack Router, deployed as a static site to GitHub Pages.
+React + TanStack Router, deployed as a static site to Firebase Hosting at
+https://activetogetheractivities.org.
 
 ## Development
 
@@ -16,7 +17,9 @@ pnpm build      # production build to dist/
 ## Deployment
 
 Pushing to `master` triggers `.github/workflows/deploy.yml`, which builds and
-publishes to GitHub Pages. The build also emits `robots.txt` and a `sitemap.xml`
+deploys `dist/` to Firebase Hosting (project `active-together-activities`).
+The workflow authenticates with a service-account key stored in the
+`FIREBASE_SERVICE_ACCOUNT_ACTIVE_TOGETHER_ACTIVITIES` repo secret. The build also emits `robots.txt` and a `sitemap.xml`
 (generated from the live routes and published programs; see
 `scripts/sitemap-plugin.ts`).
 

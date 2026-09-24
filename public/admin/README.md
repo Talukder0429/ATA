@@ -4,10 +4,10 @@ A form-based editor for the program content at `src/content/programs/*.yaml`.
 Editors don't touch code - they fill in fields, hit save, and the site rebuilds
 and redeploys automatically.
 
-- **Live URL:** `https://<your-domain>/ATA/admin/`
+- **Live URL:** `https://activetogetheractivities.org/admin/`
 - **What it edits:** the Programs collection (add / edit / reorder / hide / delete)
-- **How changes go live:** saving commits to the `master` branch -> the GitHub
-  Pages workflow rebuilds -> live in ~1-2 minutes.
+- **How changes go live:** saving commits to the `master` branch -> the Firebase
+  Hosting workflow rebuilds -> live in ~1-2 minutes.
 
 ## Login: GitHub Personal Access Token
 
