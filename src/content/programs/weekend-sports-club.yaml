@@ -1,6 +1,7 @@
 status: published
 order: 2
 name: Weekend Sports Club
+tagline: ''
 subtitle: Year-Round Weekend Program
 cardSummary: Year-round weekend sports for Grades 3-8, all skill levels.
 cardImage: https://images.unsplash.com/photo-1549057736-889b732754a2
@@ -10,18 +11,25 @@ quickFacts:
   - label: Schedule
     lines:
       - text: Saturday & Sunday
+        unavailable: false
       - text: 11:00 AM - 5:00 PM
+        unavailable: false
   - label: Ages
     lines:
-      - text: Grades 3-8
+      - text: Grades 6-9
+        unavailable: false
       - text: All skill levels welcome
+        unavailable: false
   - label: Registration
     lines:
       - text: Monthly membership & single day registration available
+        unavailable: false
   - label: Pricing
     lines:
       - text: $350/month membership
+        unavailable: false
       - text: $50/day single registration
+        unavailable: false
 sections:
   - type: prose
     heading: Program Overview
@@ -29,15 +37,16 @@ sections:
   - type: cards
     heading: Age Divisions
     items:
-      - title: Junior Division
-        text: Grades 3-5
-      - title: Intermediate Division
-        text: Grades 6-8
+      - icon: ''
+        title: Division
+        text: Grades 6-9
   - type: pricing
     heading: Pricing
+    note: ''
     items:
       - label: Monthly Membership
         price: $350/month per athlete
+        note: ''
         includes:
           - Saturday & Sunday sports programming
           - 11:00 AM - 5:00 PM sessions
@@ -50,6 +59,7 @@ sections:
           - Leadership activities
           - Team-building exercises
           - Sports equipment provided
+        unavailable: false
       - label: Single Day Registration
         price: $50/day per athlete
         note: Perfect for families who want flexibility and want to attend individual weekend sessions.
@@ -57,6 +67,7 @@ sections:
           - Full 6-hour session
           - All activities and sports programming
           - Equipment provided
+        unavailable: false
   - type: prose
     heading: Sports & Activities
     body: Participants rotate through a variety of sports and activities throughout the year, including soccer, basketball, volleyball, badminton, flag football, dodgeball, fitness challenges, and cooperative games. Regular tournaments and themed activity days keep every weekend exciting.
